@@ -23,6 +23,15 @@ a:hover {
 	margin: 0;
 	padding: 0;
 }
+.no-display {
+    display: none;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.full-width {
+    width: 100%;
+}
 .navbar {
 	background-color: transparent;
     border: none;
@@ -36,7 +45,6 @@ a:hover {
 .sticky.navbar {
 	background-color: #feb041;
 	position: fixed;
-	display: none;
 	z-index: 99999;
 }
 .sticky .navbar-brand img {
@@ -44,6 +52,12 @@ a:hover {
 }
 .sticky .navbar-nav {
 	padding: 35px 0;
+}
+.navbar-nav .active a {
+    border-radius: 10px;
+    margin-bottom: 1px;
+    color: #feb041 !important;
+    background-color: #821638 !important;
 }
 .navbar-brand {
 	height: auto;
@@ -58,6 +72,12 @@ a:hover {
 }
 .sticky .navbar-nav a {
 	color: #821638  !important;
+}
+.sticky .navbar-nav .active a {
+    border-radius: 10px;
+    margin-bottom: 1px;
+    color: #feb041 !important;
+    background-color: #821638 !important;
 }
 .navbar-header button {
 	margin: 62px 20px;
@@ -426,9 +446,6 @@ a:hover {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
 }
-.no-padding {
-    padding: 0 !important;
-}
 .event-container {
     background-color: #ececec;
     position: absolute;
@@ -479,7 +496,7 @@ a:hover {
     text-align: center;
     margin: 20px 0;
 }
-.submit-btn button, .more-events button {
+.submit-btn button, .more-events button, .job-item button, .major-item button {
     height: 58px;
     padding: 0 55px;
     box-shadow: none;
@@ -491,12 +508,66 @@ a:hover {
     font-size: 22px;
     margin: 7px;
 }
-.submit-btn button:hover, .more-events button:hover, #testCarousel button:hover {
+.submit-btn button:hover, .more-events button:hover, #testCarousel button:hover, .job-item button:hover, .major-item button:hover {
     background-color: #821638;
     color: #fff;
 }
 .more-events {
     text-align: center;
+}
+.jobs-banner {
+    margin-top: 120px;
+    position: absolute;
+}
+.jobs-banner .title {
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -153px;
+}
+.jobs-banner .title span {
+    font-family: 'Sketch Rockwell', sans-serif;
+    color: #feb041;
+}
+.jobs {
+    margin-top: 315px;
+}
+.jobs .job-item, .jobs .major-item {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.jobs .job-item .text, .jobs .major-item .text {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #821638;
+    padding: 0 35px;
+}
+.jobs .job-item, .jobs .major-item {    
+    text-align: center;
+}
+.jobs .job-item hr {
+    border-top: 5px solid #821638;
+    width: 230px;
+}
+.jobs .major-item hr {
+    border-top: 5px solid #feb041;
+    width: 230px;
+}
+.jobs .job-item .job-title, .jobs .major-item .job-title {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+}
+.jobs .job-item .job-title {
+    color: #feb041;
+}
+.jobs .major-item .job-title {
+    color: #821638;
 }
 
 @media (max-width: 767px) {
