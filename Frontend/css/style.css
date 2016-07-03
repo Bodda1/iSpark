@@ -30,6 +30,7 @@ a:hover {
     z-index: 1;
     width: 100%;
     position: absolute;
+    top: 0;
     left: 0;
 }
 .sticky.navbar {
@@ -43,11 +44,6 @@ a:hover {
 }
 .sticky .navbar-nav {
 	padding: 35px 0;
-}
-#homeCarousel {
-	position: absolute;
-	top: 0;
-	left: 0;
 }
 .navbar-brand {
 	height: auto;
@@ -66,7 +62,7 @@ a:hover {
 .navbar-header button {
 	margin: 62px 20px;
 }
-.carousel-indicators {
+#homeCarousel .carousel-indicators {
 	bottom: 100px;
 }
 .carousel-indicators .active {
@@ -130,8 +126,7 @@ a:hover {
     line-height: 15px;
 }
 .slider-panel {
-	text-align: center;
-    width: 644px;
+    text-align: center;
     background: transparent;
     position: absolute;
     top: 50%;
@@ -140,20 +135,23 @@ a:hover {
     margin-top: -100px;
     z-index: 2;
 }
-.slider-panel > div:first-child {
+#homeCarousel .slider-panel {
+    width: 644px;
+}
+#homeCarousel .slider-panel > div:first-child {
 	font-size: 36px;
 	color: #fff;
 	font-family: 'Open Sans', sans-serif;
 }
-.slider-panel > div:first-child span {
+#homeCarousel .slider-panel > div:first-child span {
 	font-size: 38px;
 	font-family: 'Sketch Rockwell', sans-serif;
 	color: #feb041;
 }
-.slider-panel > div:last-child {
+#homeCarousel .slider-panel > div:last-child {
 	padding: 20px 0;
 }
-.slider-panel button {
+#homeCarousel .slider-panel button {
     height: 42px;
     width: 136px;
     box-shadow: none;
@@ -165,7 +163,7 @@ a:hover {
     font-size: 18px;
     margin: 7px;
 }
-.slider-panel button:last-child {
+#homeCarousel .slider-panel button:last-child {
 	background-color: #821638;
     color: #feb041;
     border: 1px solid #821638
@@ -198,6 +196,7 @@ a:hover {
 	text-align: center;
 	padding: 15px;
 	line-height: 20px;
+    text-transform: uppercase;
 }
 .sub-title {
 	text-align: center;
@@ -229,6 +228,12 @@ a:hover {
 	font-weight: 600;
     font-family: 'Open Sans', sans-serif;
     padding: 30px 0;
+}
+.banner-container {
+	height: 37vw;
+}
+.counter-container {
+    height: 23vw;
 }
 .banner {
 	position: absolute;
@@ -330,8 +335,181 @@ a:hover {
 }
 .counter {
 	background-image: url("../images/counter-bg.jpg");
+	position: absolute;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 95px 0;
+    background-repeat: no-repeat;
+}
+.counter > div {
+	text-align: center;
+}
+.counter > div > div, .counter > div > div span {
+	font-family: 'Sketch Rockwell', sans-serif;
+	font-size: 55px;
+	color: #fff;
+}
+.counter > div > div:last-child {
+	font-size: 32px;
+}
+.carousel-inner {
+    text-align: center;
+}
+#testCarousel {
+    margin-top: 100px;
+}
+#testCarousel .carousel-control {
+    color: #821638;
+    text-shadow: none;
+    background-image: none !important;
+}
+#testCarousel .carousel-control:focus, .carousel-control:hover {
+    color: #821638;
+    text-decoration: none;
+    filter: alpha(opacity=90);
+    outline: 0;
+    opacity: .9;
+}
+#testCarousel .item img {
+    border: 6px solid #821638;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+#testCarousel .item .text {
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #821638;
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+#testCarousel .item .author {
+    padding: 35px;
+}
+#testCarousel .item .author span {
+    color: #feb041;
+    padding: 5px;
+    font-size: 23px;
+}
+#testCarousel button {
+    height: 58px;
+    padding: 0 55px;
+    box-shadow: none;
+    border: 1px solid #821638;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #821638;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 7px;
+}
+#endCarousel .slider-panel {
+    left: 0;
+    margin-left: 0;
+    padding: 0 150px;
+}
+#endCarousel .logo {
+    max-width: 250px;
+}
+#endCarousel .text div:first-child {
+    color: #fff;
+    font-size: 36px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    padding: 30px 0;
+}
+#endCarousel .text div:last-child {
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.event-container {
+    background-color: #ececec;
+    position: absolute;
+    left: 0;
+    padding: 40px 0;
+}
+.event {
+    padding: 20px;
+}
+.event .inner-event {
+    border: 1px solid #821638;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #fff;
+}
+.event .pic {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+}
+.event .date img {
+    max-width: 90px;
+}
+.event .location img {
+    max-width: 60px;
+    padding-top: 20px;
+    margin-right: 15px;
+}
+.event .date div:first-child, .event .location div:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #feb041;
+    line-height: 70px;
+}
+.event .text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: #821638;
+}
+.event .content {
+    font-size: 20px;
+    color: #821638;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 20px;
+}
+.submit-btn {
+    text-align: center;
+    margin: 20px 0;
+}
+.submit-btn button, .more-events button {
+    height: 58px;
+    padding: 0 55px;
+    box-shadow: none;
+    border: 1px solid #821638;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #821638;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 7px;
+}
+.submit-btn button:hover, .more-events button:hover, #testCarousel button:hover {
+    background-color: #821638;
+    color: #fff;
+}
+.more-events {
+    text-align: center;
 }
 
+@media (max-width: 767px) {
+    .counter {
+        padding: 50px 0;
+    }
+    .counter > div > div, .counter > div > div span {
+        font-size: 30px;
+    }
+    .counter > div > div:last-child {
+        font-size: 20px;
+    }
+}
 @media (min-width: 768px) {
 .navbar-right .dropdown-menu {
     right: auto;
