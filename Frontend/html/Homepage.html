@@ -12,14 +12,71 @@
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery.flexslider-min.js"></script>
     <script src="../js/bselect.min.js"></script>
-    <script src="../js/jquery.counterup.min.js"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
     <script src="../js/jquery.visible.min.js"></script>
-    <script src="../js/waypoint.js"></script>
 </head>
 <body>
 
-<div class="container homepage">
+<div id="homeCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#homeCarousel" data-slide-to="1"></li>
+    <li data-target="#homeCarousel" data-slide-to="2"></li>
+    <li data-target="#homeCarousel" data-slide-to="3"></li>
+  </ol>
 
+  <div class="down-arrow">
+    <img src="../images/down-arrow.png" />
+  </div>
+
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="slider-panel">
+        <div>
+          JOIN OUR <span>COMMUNITY</span> OF BRIGHT YOUNG MINDS
+        </div>
+        <div>
+          <button>Learn More</button>
+          <button>Join Now</button>
+        </div>
+      </div>
+      <img src="../images/slider1.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <img src="../images/slider1.jpg" alt="Chania">
+    </div>
+
+    <div class="item">
+      <div class="slider-panel">
+        <div>
+          JOIN OUR <span>COMMUNITY</span> OF BRIGHT YOUNG MINDS
+        </div>
+        <div>
+          <button>Learn More</button>
+          <button>Join Now</button>
+        </div>
+      </div>
+      <img src="../images/slider1.jpg" alt="Flower">
+    </div>
+
+    <div class="item">
+      <img src="../images/slider1.jpg" alt="Flower">
+    </div>
+  </div>
+
+      <!-- Left and right controls -->
+  <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="container">
   <!--Headers -->
   <div class="row">
     <!-- Main Header -->
@@ -58,7 +115,7 @@
     </nav>
 
     <!-- Sticky Header -->
-    <nav class="sticky navbar navbar-default">
+    <nav class="sticky no-display navbar navbar-default">
       <div class="container">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -91,176 +148,302 @@
       </div>
     </nav>
   </div>
+</div>
 
-  <!-- Homepage Slider -->
-  <div class="row slider-container">
-    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#homeCarousel" data-slide-to="1"></li>
-        <li data-target="#homeCarousel" data-slide-to="2"></li>
-        <li data-target="#homeCarousel" data-slide-to="3"></li>
-      </ol>
-
-      <div class="down-arrow">
-        <img src="../images/down-arrow.png" />
-      </div>
-
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <div class="slider-panel">
-            <div>
-              JOIN OUR <span>COMMUNITY</span> OF BRIGHT YOUNG MINDS
-            </div>
-            <div>
-              <button>Learn More</button>
-              <button>Join Now</button>
-            </div>
-          </div>
-          <img src="../images/slider1.jpg" alt="Chania">
-        </div>
-
-        <div class="item">
-          <img src="../images/slider1.jpg" alt="Chania">
-        </div>
-
-        <div class="item">
-          <div class="slider-panel">
-            <div>
-              JOIN OUR <span>COMMUNITY</span> OF BRIGHT YOUNG MINDS
-            </div>
-            <div>
-              <button>Learn More</button>
-              <button>Join Now</button>
-            </div>
-          </div>
-          <img src="../images/slider1.jpg" alt="Flower">
-        </div>
-
-        <div class="item">
-          <img src="../images/slider1.jpg" alt="Flower">
-        </div>
-      </div>
-
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-  </div>
+<div class="homepage">
 
   <!-- Mission and Vision -->
-  <div id="content" class="row white-bg">
-    <div class="title col-xs-12">
-      OUR STORY SO FAR
-    </div>
-    <div class="sub-title col-xs-12">
-      <a href="#">Check our bio</a>
-    </div>
-    <div class="col-xs-12">
-      <div class="col-xs-6 mission">
-        <img src="../images/circle.png" />
-        <span>Mission</span>
-        <div>Open the world’s greatest opportunities for students by creating a new knowledge via career coaching workshops and educational trips for universities in a safe and entertaining environment</div>
+  <div class="container">
+    <div id="content" class="row white-bg">
+      <div class="title col-xs-12">
+        OUR STORY SO FAR
       </div>
-      <div class="col-xs-6 vision">
-        <img src="../images/circle.png" />
-        <span>Vision</span>
-        <div>Open the world’s greatest opportunities for students by creating a new knowledge via career coaching workshops and educational trips for universities in a safe and entertaining environment</div>
+      <div class="sub-title col-xs-12">
+        <a href="#">Check our bio</a>
       </div>
-    </div>
-    <div class="title col-xs-12">
-      OUR PROGRAM
-    </div>
-    <div class="sub-title col-xs-12">
-      <a href="#">Check our illustration</a>
+      <div class="col-xs-12">
+        <div class="col-xs-6 mission">
+          <img src="../images/circle.png" />
+          <span>Mission</span>
+          <div>Open the world’s greatest opportunities for students by creating a new knowledge via career coaching workshops and educational trips for universities in a safe and entertaining environment</div>
+        </div>
+        <div class="col-xs-6 vision">
+          <img src="../images/circle.png" />
+          <span>Vision</span>
+          <div>Open the world’s greatest opportunities for students by creating a new knowledge via career coaching workshops and educational trips for universities in a safe and entertaining environment</div>
+        </div>
+      </div>
+      <div class="title col-xs-12">
+        OUR PROGRAM
+      </div>
+      <div class="sub-title col-xs-12">
+        <a href="#">Check our illustration</a>
+      </div>
     </div>
   </div>
 
   <!--- Middle Banner -->
-  <div class="row banner-container">
+  <div class="banner-container">
     <div class="banner">
       <img src="../images/illustration.jpg" />
     </div>
   </div>
 
   <!-- Partners -->
-  <div class="row white-bg partners">
-    <div class="title col-xs-12">
-      OUR PARTNERS
-    </div>
-    <div class="sub-title col-xs-12">
-      <a href="#">Check our partners</a>
-    </div>
-    <div class="col-xs-12 select-container">
-      <select>
-        <option value="1">Trusted Partners</option>
-        <option value="2">Another Option</option>
-        <option value="3">Third Option</option>
-      </select>
-    </div>
-    <div class="sliders">
-      <div class="flexslider col-xs-12">
-        <ul class="slides">
-          <li>
-            <div class="overlay">
-              <div>Injaz</div>
-              <div>Trusted Partner</div>
-            </div>
-            <img src="../images/injaz.png" />
-          </li>
-          <li>
-            <div class="overlay">
-              <div>GUC</div>
-              <div>Trusted Partner</div>
-            </div>
-            <img src="../images/guc.png" />
-          </li>
-          <li>
-            <div class="overlay">
-              <div>Vodafone</div>
-              <div>Trusted Partner</div>
-            </div>
-            <img src="../images/vodafone.png" />
-          </li>
-          <li>
-            <div class="overlay">
-              <div>Edge</div>
-              <div>Trusted Partner</div>
-            </div>
-            <img src="../images/edge.png" />
-          </li>
-          <li>
-            <div class="overlay">
-              <div>Career Advancers</div>
-              <div>Trusted Partner</div>
-            </div>
-            <img src="../images/career-advancers.png" />
-          </li>
-          <li>
-            <div class="overlay">
-              <div>Wuzzuf</div>
-              <div>Trusted Partner</div>
-            </div>
-            <img src="../images/wuzzuf.png" />
-          </li>
-        </ul>
+  <div class="container">
+    <div class="row white-bg partners">
+      <div class="title col-xs-12">
+        OUR PARTNERS
+      </div>
+      <div class="sub-title col-xs-12">
+        <a href="#">Check our partners</a>
+      </div>
+      <div class="col-xs-12 select-container">
+        <select>
+          <option value="1">Trusted Partners</option>
+          <option value="2">Another Option</option>
+          <option value="3">Third Option</option>
+        </select>
+      </div>
+      <div class="sliders">
+        <div class="flexslider col-xs-12">
+          <ul class="slides">
+            <li>
+              <div class="overlay">
+                <div>Injaz</div>
+                <div>Trusted Partner</div>
+              </div>
+              <img src="../images/injaz.png" />
+            </li>
+            <li>
+              <div class="overlay">
+                <div>GUC</div>
+                <div>Trusted Partner</div>
+              </div>
+              <img src="../images/guc.png" />
+            </li>
+            <li>
+              <div class="overlay">
+                <div>Vodafone</div>
+                <div>Trusted Partner</div>
+              </div>
+              <img src="../images/vodafone.png" />
+            </li>
+            <li>
+              <div class="overlay">
+                <div>Edge</div>
+                <div>Trusted Partner</div>
+              </div>
+              <img src="../images/edge.png" />
+            </li>
+            <li>
+              <div class="overlay">
+                <div>Career Advancers</div>
+                <div>Trusted Partner</div>
+              </div>
+              <img src="../images/career-advancers.png" />
+            </li>
+            <li>
+              <div class="overlay">
+                <div>Wuzzuf</div>
+                <div>Trusted Partner</div>
+              </div>
+              <img src="../images/wuzzuf.png" />
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Counter -->
-  <div class="row counter">
-    <div id="waypoint">
-      <span class=".numbers-with-commas">12,345.00</span>
+  <div class="counter-container">
+    <div class="counter" id="waypoint">
+      <div class="col-xs-4">
+        <div><span>1520</span></div>
+        <div>Coaching Hours</div>
+      </div>
+      <div class="col-xs-4">
+        <div><span>923</span></div>
+        <div>Students Impacted</div>
+      </div>
+      <div class="col-xs-4">
+        <div><span>597</span></div>
+        <div>Jobs Offered</div>
+      </div>
     </div>
   </div>
 
+  <!-- Testimonials -->
+  <div class="white-bg">
+    <div class="title col-xs-12">
+      OUR PARTICIPANTS' TESTIMONIALS
+    </div>
+    <div class="sub-title col-xs-12">
+      <a href="#">Check our happy participants</a>
+    </div>
+    <div id="testCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <div><img src="../images/user1.png" alt="Chania" /></div>
+            <div class="text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less  normal distribution of letters, as  opposed to using 'Content here</div>
+            <div class="author">
+              <span>Ahmed Saeed</span>
+              <span>|</span>
+              <span>Successful Student 2016</span>
+            </div>
+            <button>Video Testimonials</button>
+          </div>
+        </div>
+        <a class="left carousel-control" href="#testCarousel" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#testCarousel" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+  </div>
+
+  <!-- Endorsment -->
+  <div id="endCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#homeCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <div class="slider-panel">
+          <div class="col-xs-4">
+            <img class="logo" src="../images/injaz1.png" alt="Chania">
+          </div>
+          <div class="col-xs-8 text">
+            <div>
+              INJAZ STARTUP EGYPT WINNER 2016
+            </div>
+            <div>
+              Injaz Egypt is a non-profit organization that strives to actively engage the Egyptian community in inspiring and educating current and future generations in becoming qualified employees and entrepreneurs who can help contribute to the growth of our local and global economy.
+            </div>
+          </div>
+        </div>
+        <img src="../images/slider2.jpg" alt="Chania">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#homeCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#homeCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <!-- Main Events -->
+  <div class="event-container">
+    <div class="title col-xs-12">
+      OUR MAIN EVENTS
+    </div>
+    <div class="sub-title col-xs-12">
+      <a href="#">Check our calendar</a>
+    </div>
+    <div>
+      <div class="event col-xs-12 col-md-4">
+        <div class="inner-event">
+          <div class="row">
+            <div class="col-xs-12">
+              <img class="pic" src="../images/event1.jpg" />
+            </div>
+          </div>
+          <div class="date">
+            <div class="col-xs-8 pull-left">1st of June 2016</div>
+            <img class="col-xs-4 pull-right" src="../images/tour.png" />
+          </div>
+          <div class="clear"></div>
+          <div class="col-xs-12 text">
+            Find out which major is the one for you
+          </div>
+          <div class="location">
+            <div class="col-xs-8 pull-left">Event Location</div>
+            <img class="col-xs-4 pull-right" src="../images/pin.png" />
+          </div>
+          <div class="clear"></div>
+          <div class="col-xs-12 content">
+            We will be visiting the German University in Cairo to give the students first hand experience of the facilites of the university
+          </div>
+          <div class="col-xs-12 submit-btn">
+            <button>View Event</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="event col-xs-12 col-md-4">
+        <div class="inner-event">
+          <div class="row">
+            <div class="col-xs-12">
+              <img class="pic" src="../images/event1.jpg" />
+            </div>
+          </div>
+          <div class="date">
+            <div class="col-xs-8 pull-left">1st of June 2016</div>
+            <img class="col-xs-4 pull-right" src="../images/tour.png" />
+          </div>
+          <div class="clear"></div>
+          <div class="col-xs-12 text">
+            Find out which major is the one for you
+          </div>
+          <div class="location">
+            <div class="col-xs-8 pull-left">Event Location</div>
+            <img class="col-xs-4 pull-right" src="../images/pin.png" />
+          </div>
+          <div class="clear"></div>
+          <div class="col-xs-12 content">
+            We will be visiting the German University in Cairo to give the students first hand experience of the facilites of the university
+          </div>
+          <div class="col-xs-12 submit-btn">
+            <button>View Event</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="event col-xs-12 col-md-4">
+        <div class="inner-event">
+          <div class="row">
+            <div class="col-xs-12">
+              <img class="pic" src="../images/event1.jpg" />
+            </div>
+          </div>
+          <div class="date">
+            <div class="col-xs-8 pull-left">1st of June 2016</div>
+            <img class="col-xs-4 pull-right" src="../images/tour.png" />
+          </div>
+          <div class="clear"></div>
+          <div class="col-xs-12 text">
+            Find out which major is the one for you
+          </div>
+          <div class="location">
+            <div class="col-xs-8 pull-left">Event Location</div>
+            <img class="col-xs-4 pull-right" src="../images/pin.png" />
+          </div>
+          <div class="clear"></div>
+          <div class="col-xs-12 content">
+            We will be visiting the German University in Cairo to give the students first hand experience of the facilites of the university
+          </div>
+          <div class="col-xs-12 submit-btn">
+            <button>View Event</button>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="more-events">
+      <button>View All Events</button>
+    </div>
+  </div>
   <footer>
   </footer>
 </div>
@@ -271,7 +454,10 @@ function flexsliderInitialize(){
     animation: "slide",
     animationLoop: false,
     itemWidth: 185,
-    itemMargin: 5
+    itemMargin: 5,
+    start: function(slider){
+        $('.flexslider').resize();
+    }
   });
   $(".flexslider .slides li").mouseenter(function(){
     $(this).children(".overlay").slideDown("medium");
@@ -296,10 +482,7 @@ $(document).ready(function(){
   //--------- Gatting and setting sections height according to screen size ----------//
   var main_header_height = $(".main-header").height();
   var sticky_header_height = $(".sticky").height();
-  var carousel_height = $("#homeCarousel").height();
-  var banner_height = $(".banner").height();
-  $(".slider-container").css("height", carousel_height);
-  $(".banner-container").css("height", banner_height);
+  var counted = false;
 
   //---------- Scroll to content of page when clicking on the down arrow in the homepage slider -----------//
   $('.down-arrow').click(function () {
@@ -309,15 +492,24 @@ $(document).ready(function(){
     return false;
   });
 
-  //---------- Switching between main and sticky headers according to the window's scroll value ----------//
   $(window).scroll(function() {
+    //---------- Switching between main and sticky headers according to the window's scroll value ----------//
     if ($(this).scrollTop() > main_header_height){
-      $( ".sticky" ).fadeIn("fast");
-      //$( ".sticky" ).slideDown("fast");
+      $(".sticky").fadeIn("fast");
     }
     else{
-      $( ".sticky" ).fadeOut("fast");
-      //$( ".sticky" ).slideUp("fast");
+      $(".sticky").fadeOut("fast");
+    }
+
+    //---------- Counter numbers animation ---------->
+    if($('#waypoint').visible() && counted == false){
+      counted = true;
+      var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+      $(".counter span").each(function(index) {
+      $(this).animateNumber({ 
+        number: $(this).text(),
+        numberStep: comma_separator_number_step });
+      }, 1500);
     }
   });
 
@@ -359,21 +551,6 @@ $(document).ready(function(){
     flexsliderInitialize();
   });
 
-  //---------- Counter numbers animation ---------->
-  //var waypoint = new Waypoint({
-  //  element: document.getElementById('waypoint'),
-  //  handler: function(direction) {
-  //    console.log('Scrolled to waypoint!')
-  //  }
-  //});
-  var elem = document.getElementById("waypoint");
-  if($('#waypoint').visible()){
-    alert("in");
-    $('.counter span').counterUp({
-      delay: 10, // the delay time in ms
-      time: 1000 // the speed time in ms
-    });
-  }
 });
 
 </script>
