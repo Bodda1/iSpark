@@ -11,7 +11,11 @@
 * {
     font-family: 'Rockwell', sans-serif;
 }
-h3:focus, input:focus, button:focus, select:focus, textarea:focus {
+<<<<<<< HEAD
+h3:focus, input:focus, button:focus, select:focus {
+=======
+input:focus, button:focus, select:focus, textarea:focus {
+>>>>>>> 2371e4f9ef5c5f3eb9f06f9c2b8a0ad770f33f5d
     outline: none;
 }
 a:hover {
@@ -799,12 +803,10 @@ input#password {
     text-align: center;
     margin-top: 20px;
 }
+<<<<<<< HEAD
 .conf-text-div {
     text-align: center;
     margin-top: 15px;
-.profile-title {
-    margin-top: -40px !important;
-    margin-left: -195px !important;
 }
 .conf-main-text {
     color: #102b4c;
@@ -835,35 +837,6 @@ input#password {
 }
 #accordion h3 {
     background-image: url("../images/conferences-title-icon.png");
-.profile-title .sub-title {
-    margin-top: 15px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #feb041;
-}
-.profile-image {
-    text-align: center;
-}
-.profile-image img {
-    width: 100%;
-    border: 6px solid #821638;
-    border-radius: 50%;
-}
-.profile-info > div {
-    padding: 20px 0;
-}
-.profile-info img {
-    width: 50px;
-}
-.profile-info span {
-    font-size: 20px;
-    color: #102b4c;
-    font-family: 'Open Sans', sans-serif;
-    padding: 15px;
-}
-.profile-info .upload button {
-    background-image: url("../images/upload.png");
-    background-position: 160px -2px;
     background-repeat: no-repeat;
     background-position: 22px 14px;
     text-align: left;
@@ -881,32 +854,12 @@ input#password {
 }
 #accordion .fa {
     float: right;
-    background-color: transparent;
-    box-shadow: none;
-    border: 1px solid #821638;
-    border-radius: 10px;
-    height: 60px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #821638;
-    padding-right: 96px;
-    padding-left: 20px;
-}
-.achievements .achieve-title {
-    font-size: 36px;
-    font-weight: bold;
-    color: #821638;
-    text-align: center;  
 }
 .accordion-color-blue {
     background-color: #102b4c !important;
-.achievements > div:first-child .achieve-title {
-    margin-bottom: 40px;
 }
 .accordion-color-red {
     background-color: #821638 !important;
-.achievements > div:last-child .achieve-title {
-    margin-bottom: 20px;
 }
 .accordion-body-img {
     width: 100%;
@@ -918,16 +871,6 @@ input#password {
 }
 .accordion-body-icon-text-blue {
     color: #102b4c;
-.achievements .prog-bar {
-    position: relative;
-}
-.achievements .prog-bar > div > div:first-child {
-    position: absolute;
-    color: #feb041;
-    z-index: 2;
-    line-height: 50px;
-    margin-left: 15px;
-    font-size: 18px;
 }
 .accordion-body-icon-text-red {
     color: #821638;
@@ -939,16 +882,6 @@ input#password {
 }
 .accordion-body-icon-row {
     margin-top: 20px;
-.progress {
-    height: 50px;
-    border: 1px solid #821638;
-    box-shadow: none;
-    border-radius: 0;
-    background-color: #ececec;
-}
-.progress-bar {
-    background-color: #821638;
-    border: 1px solid #feb041;
 }
 .accordion-body-icon-border {
     height: 259px;
@@ -993,49 +926,6 @@ input#password {
 }
 .major-title-span {
     margin-right: 20px;
-.achievements .prog-bar .percentage {
-    font-family: 'Libre Baskerville', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #821638;
-    line-height: 50px;
-}
-.achievements .badge-item:nth-child(1) img {
-    width: 50px;
-}
-.achievements .badge-item:nth-child(2) img {
-    width: 40px;
-    padding-top: 5px;
-}
-.achievements .badge-item:nth-child(3) img {
-    width: 36px;
-    padding-top: 5px;
-}
-.achievements .badge-item:nth-child(2) div, .achievements .badge-item:nth-child(3) div {
-    line-height: 25px;
-}
-.achievements .badge-item div {
-    text-align: center;
-    font-size: 18px;
-    color: #102b4c;
-    line-height: 18px;
-    padding-top: 8px;
-}
-.achievements .flexslider {
-    background-color: transparent;
-    border: none;
-}
-.achievements .flexslider .slides img {
-    width: 80px;
-    margin: 0 auto;
-}
-.achievements .flex-control-paging {
-    display: none;
-}
-.achievements .flexslider li div {
-    text-align: center;
-    font-size: 18px;
-    color: #feb041;
     font-family: 'Open Sans', sans-serif;
     color: white;
 }
@@ -1080,6 +970,130 @@ input#password {
 }
 .major-plus-icon {
     float: none !important;
+=======
+.profile-title {
+    margin-top: -40px !important;
+    margin-left: -195px !important;
+}
+.profile-title .sub-title {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #feb041;
+}
+.profile-image {
+    text-align: center;
+}
+.profile-image img {
+    width: 100%;
+    border: 6px solid #821638;
+    border-radius: 50%;
+}
+.profile-info > div {
+    padding: 20px 0;
+}
+.profile-info img {
+    width: 50px;
+}
+.profile-info span {
+    font-size: 20px;
+    color: #102b4c;
+    font-family: 'Open Sans', sans-serif;
+    padding: 15px;
+}
+.profile-info .upload button {
+    background-image: url("../images/upload.png");
+    background-position: 160px -2px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #821638;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #821638;
+    padding-right: 96px;
+    padding-left: 20px;
+}
+.achievements .achieve-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #821638;
+    text-align: center;  
+}
+.achievements > div:first-child .achieve-title {
+    margin-bottom: 40px;
+}
+.achievements > div:last-child .achieve-title {
+    margin-bottom: 20px;
+}
+.achievements .prog-bar {
+    position: relative;
+}
+.achievements .prog-bar > div > div:first-child {
+    position: absolute;
+    color: #feb041;
+    z-index: 2;
+    line-height: 50px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.progress {
+    height: 50px;
+    border: 1px solid #821638;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #ececec;
+}
+.progress-bar {
+    background-color: #821638;
+    border: 1px solid #feb041;
+}
+.achievements .prog-bar .percentage {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #821638;
+    line-height: 50px;
+}
+.achievements .badge-item:nth-child(1) img {
+    width: 50px;
+}
+.achievements .badge-item:nth-child(2) img {
+    width: 40px;
+    padding-top: 5px;
+}
+.achievements .badge-item:nth-child(3) img {
+    width: 36px;
+    padding-top: 5px;
+}
+.achievements .badge-item:nth-child(2) div, .achievements .badge-item:nth-child(3) div {
+    line-height: 25px;
+}
+.achievements .badge-item div {
+    text-align: center;
+    font-size: 18px;
+    color: #102b4c;
+    line-height: 18px;
+    padding-top: 8px;
+}
+.achievements .flexslider {
+    background-color: transparent;
+    border: none;
+}
+.achievements .flexslider .slides img {
+    width: 80px;
+    margin: 0 auto;
+}
+.achievements .flex-control-paging {
+    display: none;
+}
+.achievements .flexslider li div {
+    text-align: center;
+    font-size: 18px;
+    color: #feb041;
+>>>>>>> 2371e4f9ef5c5f3eb9f06f9c2b8a0ad770f33f5d
 }
 
 @media (max-width: 767px) {
