@@ -448,8 +448,6 @@ a:hover {
 }
 .event-container {
     background-color: #ececec;
-    position: absolute;
-    left: 0;
     padding: 40px 0;
 }
 .event {
@@ -535,7 +533,56 @@ a:hover {
     color: #feb041;
 }
 .jobs, .contact-info {
-    padding-top: 315px;
+    margin-top: 315px;
+}
+.contact-info > div {
+    text-align: center;
+}
+.contact-info .contact-item {
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #821638;
+    padding: 5px 40px 5px 40px;
+    border-radius: 10px;
+    margin: 30px;
+}
+.contact-info .contact-item p {
+    color: #831538;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-row {
+    padding: 25px 0;
+}
+.contact-row .contact-numbers {
+    text-align: center;
+    padding-top: 20px;
+}
+.contact-row .contact-numbers > div {
+    margin: 20px 0;
+}
+.contact-row .contact-numbers > div > div, .contact-row .contact-numbers > div > div strong {
+    display: inline-block;
+    color: #821638;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+}
+.contact-row .contact-numbers > div:last-child {
+    margin: 0 auto;
+}
+.contact-row .contact-numbers hr {
+    width: 30px;
+    margin: 0 auto;
+    border-top: 1px solid #821638;
+}
+.contact-row .contact-numbers > div > div img {
+    padding: 0 5px;
+}
+.contact-row #map {
+    top: 30px;
+    display: block;
+    width: 100%;
+    height: 500px;
 }
 .jobs .job-item, .jobs .major-item {
     padding-top: 40px;
