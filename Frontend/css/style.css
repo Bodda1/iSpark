@@ -218,6 +218,9 @@ a:hover {
 	line-height: 20px;
     text-transform: uppercase;
 }
+.title > span {
+    /*text-transform: lowercase;*/
+}
 .sub-title {
 	text-align: center;
 	line-height: 15px;
@@ -516,6 +519,12 @@ a:hover {
 .jobs-banner {
     margin-top: 120px;
     position: absolute;
+    background-image: url("../images/jobs_banner.jpg");
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 .jobs-banner .title {
     font-size: 36px;
@@ -546,12 +555,16 @@ a:hover {
     border-radius: 10px;
     margin: 30px;
 }
+.contact-info .contact-item img {
+    width: 50px;
+    padding: 10px;
+}
 .contact-info .contact-item p {
     color: #831538;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
 }
-.contact-row {
+.contact-row, .profile-row {
     padding: 25px 0;
 }
 .contact-row .contact-numbers {
@@ -623,7 +636,7 @@ a:hover {
 .contact-info .info-item {
     text-align: center;
 }
-.message {
+.grey-bg {
     background: #ececec;
 }
 .message form {
@@ -785,6 +798,129 @@ input#password {
 .footer-social-div {
     text-align: center;
     margin-top: 20px;
+}
+.profile-title {
+    margin-top: -40px !important;
+    margin-left: -195px !important;
+}
+.profile-title .sub-title {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #feb041;
+}
+.profile-image {
+    text-align: center;
+}
+.profile-image img {
+    width: 100%;
+    border: 6px solid #821638;
+    border-radius: 50%;
+}
+.profile-info > div {
+    padding: 20px 0;
+}
+.profile-info img {
+    width: 50px;
+}
+.profile-info span {
+    font-size: 20px;
+    color: #102b4c;
+    font-family: 'Open Sans', sans-serif;
+    padding: 15px;
+}
+.profile-info .upload button {
+    background-image: url("../images/upload.png");
+    background-position: 160px -2px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #821638;
+    border-radius: 10px;
+    height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #821638;
+    padding-right: 96px;
+    padding-left: 20px;
+}
+.achievements .achieve-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #821638;
+    text-align: center;  
+}
+.achievements > div:first-child .achieve-title {
+    margin-bottom: 40px;
+}
+.achievements > div:last-child .achieve-title {
+    margin-bottom: 20px;
+}
+.achievements .prog-bar {
+    position: relative;
+}
+.achievements .prog-bar > div > div:first-child {
+    position: absolute;
+    color: #feb041;
+    z-index: 2;
+    line-height: 50px;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.progress {
+    height: 50px;
+    border: 1px solid #821638;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #ececec;
+}
+.progress-bar {
+    background-color: #821638;
+    border: 1px solid #feb041;
+}
+.achievements .prog-bar .percentage {
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #821638;
+    line-height: 50px;
+}
+.achievements .badge-item:nth-child(1) img {
+    width: 50px;
+}
+.achievements .badge-item:nth-child(2) img {
+    width: 40px;
+    padding-top: 5px;
+}
+.achievements .badge-item:nth-child(3) img {
+    width: 36px;
+    padding-top: 5px;
+}
+.achievements .badge-item:nth-child(2) div, .achievements .badge-item:nth-child(3) div {
+    line-height: 25px;
+}
+.achievements .badge-item div {
+    text-align: center;
+    font-size: 18px;
+    color: #102b4c;
+    line-height: 18px;
+    padding-top: 8px;
+}
+.achievements .flexslider {
+    background-color: transparent;
+    border: none;
+}
+.achievements .flexslider .slides img {
+    width: 80px;
+    margin: 0 auto;
+}
+.achievements .flex-control-paging {
+    display: none;
+}
+.achievements .flexslider li div {
+    text-align: center;
+    font-size: 18px;
+    color: #feb041;
 }
 
 @media (max-width: 767px) {
