@@ -11,7 +11,7 @@
 * {
     font-family: 'Rockwell', sans-serif;
 }
-input:focus, button:focus, select:focus {
+input:focus, button:focus, select:focus, textarea:focus {
     outline: none;
 }
 a:hover {
@@ -534,18 +534,22 @@ a:hover {
     font-family: 'Sketch Rockwell', sans-serif;
     color: #feb041;
 }
-.jobs {
-    margin-top: 315px;
+.jobs, .contact-info {
+    padding-top: 315px;
 }
 .jobs .job-item, .jobs .major-item {
-    padding-top: 60px;
+    padding-top: 40px;
     padding-bottom: 60px;
+}
+.jobs .job-item img, .jobs .major-item img {
+    max-width: 150px;
 }
 .jobs .job-item .text, .jobs .major-item .text {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     color: #821638;
     padding: 0 35px;
+    line-height: 20px;
 }
 .jobs .job-item, .jobs .major-item {    
     text-align: center;
@@ -567,6 +571,52 @@ a:hover {
     color: #feb041;
 }
 .jobs .major-item .job-title {
+    color: #821638;
+}
+.contact-info .info-item {
+    text-align: center;
+}
+.message {
+    background: #ececec;
+}
+.message form {
+    padding: 40px 0;
+}
+.message input::-webkit-input-placeholder, .message textarea::-webkit-input-placeholder {
+   color: #feb041;
+}
+.message input:-moz-placeholder, .message textarea:-moz-placeholder { /* Firefox 18- */
+   color: #feb041;  
+}
+.message input::-moz-placeholder, .message textarea::-moz-placeholder {  /* Firefox 19+ */
+   color: #feb041;  
+}
+.message input:-ms-input-placeholder, .message textarea:-ms-input-placeholder {  
+   color: #feb041;  
+}
+.message form input {
+    background-color: transparent;
+    border: 1px solid #821638;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #feb041;
+    height: 38px;
+    padding: 10px;
+}
+.message textarea {
+    border: 1px solid #821638;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #feb041;
+    height: 200px;
+    padding: 10px;   
+    background-color: transparent;
+}
+.message .submit-btn {
+        margin: 0;
+    font-size: 22px;
+    height: 60px;
+    font-weight: bold;
     color: #821638;
 }
 
