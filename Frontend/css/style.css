@@ -11,7 +11,7 @@
 * {
     font-family: 'Rockwell', sans-serif;
 }
-input:focus, button:focus, select:focus {
+h3:focus, input:focus, button:focus, select:focus {
     outline: none;
 }
 a:hover {
@@ -581,8 +581,8 @@ a:hover {
     text-align: center;
     color: #feb041;
     font-weight: 900;
-    font-size: 20px;
-    line-height: 9;
+    font-size: 36px;
+    line-height: 5.5;
     font-family: 'Sketch Rockwell', sans-serif;
 }
 .login-form-div {
@@ -637,7 +637,7 @@ a:hover {
     border: none;
     border-radius: 5px;
 }
-input:focus {
+h3:focus, select:focus, input:focus {
     box-shadow: none !important;
 }
 input#email {
@@ -688,6 +688,173 @@ input#password {
 .footer-social-div {
     text-align: center;
     margin-top: 20px;
+}
+.conf-text-div {
+    text-align: center;
+    margin-top: 15px;
+}
+.conf-main-text {
+    color: #102b4c;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+}
+.conf-sub-text {
+    color: #c0b48b;
+    font-weight: 600;
+    font-size: 14px;
+}
+.conf .bselect {
+    width: 300px;
+}
+.conf .bselect-label {
+    min-width: 200px !important;
+}
+.conf-accordion-container {
+    margin-top: 20px;
+}
+.conf .bselect-label:hover {
+    background: none;
+}
+#accordion{
+    margin-bottom: 40px;
+}
+#accordion h3 {
+    background-image: url("../images/conferences-title-icon.png");
+    background-repeat: no-repeat;
+    background-position: 22px 14px;
+    text-align: left;
+    padding: 20px 14px 20px 70px;
+    background-size: 30px 30px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Sketch Rockwell', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+#accordion .date {
+    color: #feb041;
+    font-family: 'Sketch Rockwell', sans-serif;
+}
+#accordion .fa {
+    float: right;
+}
+.accordion-color-blue {
+    background-color: #102b4c !important;
+}
+.accordion-color-red {
+    background-color: #821638 !important;
+}
+.accordion-body-img {
+    width: 100%;
+    height: 100%;
+}
+.accordion-body-icon-text {
+    text-align: left;
+    font-weight: 600;
+}
+.accordion-body-icon-text-blue {
+    color: #102b4c;
+}
+.accordion-body-icon-text-red {
+    color: #821638;
+}
+.accordion-body-border {
+    border: 1px solid #102b4c;
+    border-radius: 30px;
+    height: 259px;
+}
+.accordion-body-icon-row {
+    margin-top: 20px;
+}
+.accordion-body-icon-border {
+    height: 259px;
+    padding: 0px 5px 0px 25px;
+}
+.accordion-body-icon-border-2 {
+    height: 259px;
+    padding:0px 5px 0px 15px;
+}
+.accordion-table {
+    display: table;
+}
+.accordion-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+.accordion-body {
+    /*padding-top: 40px !important;
+    padding-bottom: 40px !important;*/
+    border: 1px solid #102b4c !important;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    position: relative;
+    top: -3px;
+}
+.accordion-button {
+    border: none;
+    background-color: #39b54a;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    font-family: inherit !important;
+    padding: 15px 60px 15px 60px;
+    font-size: 22px !important;
+}
+.accordion-button-div{
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.accordion-main-block {
+    margin-top: 30px;
+}
+.major-title-span {
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+.major-accordion-h3 {
+    background-image: none !important;
+    padding: 20px 14px 20px 30px !important;
+}
+.major-accordion-date {
+    color: white !important;
+}
+.major-body-icon-row {
+    margin-top: 17px;
+}
+.major-text p {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+.major-text {
+    padding: 0px 15px 0px 50px !important;
+}
+.major-text-icon-1 {
+    background: #102b4c;
+    color: white;
+}
+.major-text-icon-2 {
+    background: #821638;
+    color: #feb041;
+}
+.major-text-icon-3 {
+    background: #feb041;
+    color: #821638;
+}
+.major-text-icon-4 {
+    background: #821638;
+    color: white;
+}
+.major-text-icon-5 {
+    background: #feb041;
+    color: white;
+}
+.major-plus-icon {
+    float: none !important;
 }
 
 @media (max-width: 767px) {
