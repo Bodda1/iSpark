@@ -11,8 +11,7 @@
 * {
     font-family: 'Rockwell', sans-serif;
 }
-
-h3:focus, input:focus, button:focus, select:focus {
+h3:focus, input:focus, button:focus, select:focus, textarea:focus, a:focus {
     outline: none;
 }
 a:hover {
@@ -54,6 +53,12 @@ a:hover {
 .sticky .navbar-nav {
 	padding: 35px 0;
 }
+.sticky .navbar-nav .logged-in a {
+    color: #102b4c !important;
+}
+.sticky .navbar-nav .logged-in:hover a {
+    color: #feb041 !important;
+}
 .navbar-nav .active a {
     border-radius: 10px;
     margin-bottom: 1px;
@@ -71,7 +76,7 @@ a:hover {
 	font-size: 20px;
 	font-weight: bold;
 }
-.sticky .navbar-nav a {
+.sticky .navbar-nav > li > a {
 	color: #821638  !important;
 }
 .sticky .navbar-nav .active a {
@@ -128,7 +133,7 @@ a:hover {
     background: transparent;
     font-size: 21px !important;
 }
-.dropdown:hover ul {
+.dropdown.open ul, .dropdown:hover ul {
     display: block;
     background-color: transparent;
     box-shadow: none;
@@ -136,7 +141,7 @@ a:hover {
     border-radius: 10px;
     padding: 0;
 }
-.sticky .dropdown:hover ul {
+.sticky .dropdown ul, .sticky .dropdown:hover ul {
 	background-color: #821638;
     border: 1px solid #feb041;
 }
@@ -219,8 +224,11 @@ a:hover {
 	line-height: 20px;
     text-transform: uppercase;
 }
-.title > span {
-    /*text-transform: lowercase;*/
+.dark-bg .title {
+    color: #feb041;
+}
+.lowercase {
+    text-transform: lowercase;
 }
 .sub-title {
 	text-align: center;
@@ -266,19 +274,19 @@ a:hover {
 .banner img {
 	width: 100%;
 }
-.partners .select-container {
+.partners .select-container, .mentors .select-container {
 	text-align: center;
 	margin: 35px 0;
 }
-.partners .bselect {
+.partners .bselect, .mentors .bselect {
 	box-shadow: none;
     border: 1px solid #821638;
     border-radius: 10px;
 }
-.partners .bselect .caret {
+.partners .bselect .caret, .mentors .bselect .caret {
 	display: none;
 }
-.partners .bselect-label {
+.partners .bselect-label, .mentors .bselect-label {
 	background: transparent;
     text-shadow: none;
     border: none;
@@ -289,8 +297,12 @@ a:hover {
     min-width: 140px !important;
     padding: 20px 0px;
     margin: 0 20px;
+    width: auto !important;
 }
-.partners .bselect .bselect-caret {
+.mentors .bselect-label {
+    width: 350px !important;
+}
+.partners .bselect .bselect-caret, .mentors .bselect .bselect-caret {
 	background-image: url("../images/select-arrow.png");
     background-position: 15px;
     background-repeat: no-repeat;
@@ -302,12 +314,12 @@ a:hover {
     color: #821638;
     width: 30px;
 }
-.partners .bselect .bselect-option a {
+.partners .bselect .bselect-option a, .mentors .bselect .bselect-option a {
 	background: #fff;
     color: #821638;
     font-size: 18px;
 }
-.partners .bselect .bselect-dropdown {
+.partners .bselect .bselect-dropdown, .mentors .bselect .bselect-dropdown {
 	box-shadow: none;
     background-color: #ffffff;
     width: 100%;
@@ -317,11 +329,11 @@ a:hover {
 .bselect-option {
     cursor: pointer;
 }
-.partners .bselect .bselect-option:hover a , .partners .bselect .bselect-option.active a {
+.partners .bselect .bselect-option:hover a, .partners .bselect .bselect-option.active a, .mentors .bselect .bselect-option:hover a, .mentors .bselect .bselect-option.active a {
     font-size: 20px;
     text-shadow: none;
 }
-.partners .bselect.open .bselect-caret {
+.partners .bselect.open .bselect-caret, .mentors .bselect.open .bselect-caret {
 	box-shadow: none;
 	background-image: url("../images/select-arrow.png");
 }
@@ -331,7 +343,7 @@ a:hover {
     border-radius: 10px;
     cursor: pointer;
 }
-.partners .flexslider .overlay {
+.partners .flexslider .overlay, .mentors .flexslider .overlay {
 	display: none;
 	position: absolute;
     background-color: #821638;
@@ -417,7 +429,7 @@ a:hover {
     padding: 5px;
     font-size: 23px;
 }
-#testCarousel button {
+#testCarousel button, .announcements button {
     height: 58px;
     padding: 0 55px;
     box-shadow: none;
@@ -510,7 +522,7 @@ a:hover {
     font-size: 22px;
     margin: 7px;
 }
-.submit-btn button:hover, .more-events button:hover, #testCarousel button:hover, .job-item button:hover, .major-item button:hover {
+.submit-btn button:hover, .more-events button:hover, #testCarousel button:hover, .job-item button:hover, .major-item button:hover, .announcements button:hover {
     background-color: #821638;
     color: #fff;
 }
@@ -518,16 +530,24 @@ a:hover {
     text-align: center;
 }
 .jobs-banner {
+    background-image: url("../images/jobs_banner.jpg");
+}
+.mentors-banner {
+    background-image: url("../images/mentors-banner.jpg");
+}
+.contact-banner {
+    background-image: url("../images/contact_banner.jpg");
+}
+.jobs-banner, .mentors-banner, .contact-banner {
     margin-top: 120px;
     position: absolute;
-    background-image: url("../images/jobs_banner.jpg");
     background-repeat: no-repeat;
     height: 200px;
     width: 100%;
     background-size: cover;
     background-position: center;
 }
-.jobs-banner .title {
+.jobs-banner .title, .mentors-banner .title, .contact-banner .title {
     font-size: 36px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -538,11 +558,14 @@ a:hover {
     margin-top: -25px;
     margin-left: -153px;
 }
-.jobs-banner .title span {
+.jobs-banner .title span, .mentors-banner .title span, .contact-banner .title span {
     font-family: 'Sketch Rockwell', sans-serif;
     color: #feb041;
 }
-.jobs, .contact-info {
+.title span.lowercase {
+    font-family: 'Open Sans', sans-serif;
+}
+.jobs, .contact-info, .mentors {
     margin-top: 315px;
 }
 .contact-info > div {
@@ -639,6 +662,9 @@ a:hover {
 }
 .grey-bg {
     background: #ececec;
+}
+.dark-bg {
+    background: #821638;
 }
 .message form {
     padding: 40px 0;
@@ -1082,7 +1108,7 @@ input#password {
     width: 80px;
     margin: 0 auto;
 }
-.achievements .flex-control-paging {
+.achievements .flex-control-paging, .mentors .flex-control-paging {
     display: none;
 }
 .achievements .flexslider li div {
@@ -1282,6 +1308,201 @@ input#password {
 .job-more-div-margin {
     margin-bottom: 40px;
 }
+.achievements .flexslider .flex-nav-prev a, .mentors .flexslider .flex-nav-prev a {
+    background-image: url("../images/right-arrow.png");
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 0 !important;
+}
+.achievements .flexslider .flex-nav-next a, .mentors .flexslider .flex-nav-next a {
+    background-image: url("../images/right-arrow.png");
+    right: 0 !important;
+}
+.achievements .flexslider .flex-direction-nav a, .mentors .flexslider .flex-direction-nav a {
+    opacity: 1 !important;
+    background-repeat: no-repeat;
+    background-position: 5px 10px;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.achievements .flexslider .flex-direction-nav a:before, .mentors .flexslider .flex-direction-nav a:before {
+    content: "";
+}
+.services .service-item {
+    padding: 25px 0;
+    border: 1px solid #feb041;
+    border-radius: 10px;
+}
+.services .service-item > div img {
+    width: 100%;
+    padding: 8px 0;
+}
+.services .service-item > div > div {
+    color: #fff;
+    font-size: 23px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 25px;
+}
+.services .service-item > div > div a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #feb041;
+}
+#calendar {
+    margin-bottom: 20px;
+}
+#calendar .fc-widget-content span {
+    font-family: 'Lato', sans-serif;
+    font-size: .85em;
+    line-height: 1.3;
+    font-weight: 400;
+}
+#calendar .fc-day-grid-container {
+    height: auto !important;
+}
+.events .event-row > div {
+    color: #821638;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+.events img {
+    width: 100%;
+}
+.events .event-row {
+    padding: 10px 0;
+}
+.events .event-row > div:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.events .event-row > div:last-child {
+    padding: 0;
+    line-height: 23px;
+    font-size: 18px;
+}
+.events #eventsCarousel .carousel-control {
+    background: none;
+    height: 20px;
+    color: #102b4c;
+    text-shadow: none; 
+    width: auto;
+    position: relative;
+    opacity: 1;
+}
+.events #eventsCarousel .carousel-control span, .events #eventsCarousel .carousel-control span strong {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+.events #eventsCarousel .carousel-inner {
+    text-align: left;
+}
+.events .events-controls {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.announcements > div:last-child {
+    text-align: center;
+}
+.announcements .announcement-item > div:first-child {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #821638;
+}
+.announcements .announcement-item > div:nth-child(2) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #821638;
+    margin: 10px auto;
+}
+.announcements .announcement-item > div:nth-child(3), .announcements .announcement-item > div:nth-child(4) {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.announcements .announcement-item > div:nth-child(4) {
+    text-align: right;
+}
+.announcements hr {
+    border-top: 1px dashed #333333;
+    margin-bottom: 0px;
+}
+.mentors .flexslider li > img {
+    border: 10px solid #821638;
+    border-radius: 50%;
+}
+.mentors .flexslider .overlay {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid rgb(130, 22, 56);
+    margin-left: 0px;
+    padding: 0 !important;
+}
+.mentors .flexslider .overlay > div {
+    height: 100%;
+    padding: 20px;
+    border: 2px solid #feb041;
+    border-radius: 50%;
+}
+.mentors .flexslider .overlay > div > img {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
+}
+.mentors .flexslider li .data > div {
+    padding-top: 20px;
+    text-align: center;
+}
+.mentors .flexslider li .name {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color: #821638;
+    text-transform: uppercase;
+}
+.mentors .flexslider li .job {
+    font-size: 20px;
+    font-weight: bold;
+    color: #feb041;
+}
+.mentors .flexslider li .avail, .mentors .flexslider li .dates {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    color: #821638;
+}
+.mentors .flexslider li .avail {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.mentors .flexslider li .email {
+    font-size: 16px;
+    font-weight: bold;
+    color: #feb041;
+}
+.mentors .flexslider li .email img {
+    width: 22px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.mentors .flexslider li .data hr {
+    border-top: 6px solid #feb041;
+}
+.mentors .flexslider li .user-image {
+    cursor: pointer;
+}
+
 
 @media (max-width: 767px) {
     .counter {
