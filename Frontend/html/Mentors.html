@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/flexslider.css">
+    <link rel="stylesheet" type="text/css" href="../css/bselect.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bi-style.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-progressbar-3.3.4.min.css">
+    <link rel='stylesheet' href='../css/fullcalendar.min.css' />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.flexslider-min.js"></script>
+    <script src="../js/bselect.min.js"></script>
+    <script src="../js/jquery-barIndicator.js"></script>
+    <script src="../js/jquery.visible.min.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script src="../js/bootstrap-progressbar.min.js"></script>
+    <script src='../js/moment.min.js'></script>
+    <script src='../js/fullcalendar.min.js'></script>
+</head>
+<body>
+
+    <div class="container">
+      <!--Headers -->
+      <div class="row">
+        <!-- Sticky Header -->
+        <nav class="sticky navbar navbar-default">
+          <div class="container">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="../images/logo.png" /></a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Programs <!--<span class="caret"></span>--></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Major Exploration</a></li>
+                      <li><a href="#">Job Shadowing & Internships</a></li>
+                      <li><a href="#">Conferences</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Jobs & Majors</a></li>
+                  <li class="active"><a href="#">Mentors</a></li>
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li class="logged-in"><a href="#">Welcome, Mostafa</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Top banner image -->
+    <div class="mentors-banner">
+        <div class="title">Our <span>Mentors</span>
+        </div>
+    </div>
+    
+    <div class="container mentors">
+      <div class="row profile-row">
+        <div class="title col-xs-12">
+          Choose a Category
+        </div>
+        <div class="sub-title col-xs-12">
+          <a href="#">View our Mentors</a>
+        </div>
+        <div class="col-xs-12 select-container">
+          <select>
+            <option value="1">Administration and Business Management</option>
+            <option value="2">Another Option</option>
+            <option value="3">Third Option</option>
+          </select>
+        </div>
+        <div class="sliders">
+          <div class="flexslider col-xs-12">
+            <ul class="slides">
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hashisha.png" />
+                <div class="data">
+                  <div class="name">Mostafa Hashisha</div>
+                  <div class="job">-Journalist-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    mostafa.hashisha@gmail.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hashisha.png" />
+                <div class="data">
+                  <div class="name">Tasbih Tarek</div>
+                  <div class="job">-Management Consultant-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    tasbih.tarek@gmail.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hazem.png" />
+                <div class="data">
+                  <div class="name">Hazem El Samra</div>
+                  <div class="job">-Software Engineer-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    hazem.samr@ispark.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hany.png" />
+                <div class="data">
+                  <div class="name">Hany Olama</div>
+                  <div class="job">-Mechanical Engineer-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    hany.olama@ispark.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hashisha.png" />
+                <div class="data">
+                  <div class="name">Mostafa Hashisha</div>
+                  <div class="job">-Journalist-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    mostafa.hashisha@gmail.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hashisha.png" />
+                <div class="data">
+                  <div class="name">Tasbih Tarek</div>
+                  <div class="job">-Management Consultant-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    tasbih.tarek@gmail.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hazem.png" />
+                <div class="data">
+                  <div class="name">Hazem El Samra</div>
+                  <div class="job">-Software Engineer-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    hazem.samr@ispark.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+              <li>
+                <div class="overlay">
+                  <div>
+                    <img src="../images/zoom.png" />
+                  </div>
+                </div>
+                <img src="../images/hany.png" />
+                <div class="data">
+                  <div class="name">Hany Olama</div>
+                  <div class="job">-Mechanical Engineer-</div>
+                  <div class="avail">Availability</div>
+                  <div class="dates">
+                    Mondays, 3 PM to 6 PM <br/>
+                    Wednesdays, 12 PM to 5 PM<br />
+                    Thursdays, 10 AM to !2 PM<br />
+                    Fridays, 4 PM to 8 PM
+                  </div>
+                  <div class="email">
+                    <img src="../images/email2.png" />
+                    hany.olama@ispark.com
+                  </div>
+                  <div class="line"><hr></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-div">
+        <div class="container footer-container">
+          <div class="row footer-main-row hidden-xs">
+            <div class="footer-main-block">
+              <img src="../images/footer-building.jpg"/>
+              <p class="footer-main-block-p footer-main-block-p-1">Villa 56, Street 21</br>Settlement 5</br>Cairo, Egypt</p>
+            </div>
+            <div class="footer-main-block">
+              <img src="../images/footer-env.jpg"/>
+              <p class="footer-main-block-p footer-main-block-p-2">info@ispark.com</br>sales@ispark.com</p>
+            </div>
+            <div class="footer-main-block">
+              <img src="../images/footer-phone.jpg"/>
+              <p class="footer-main-block-p footer-main-block-p-2">+2 012 345 67890</br>+2 23745662</p>
+            </div>
+          </div>
+          <div class="footer-social-div">
+            <a href="#"><img src="../images/footer-facebook.jpg"/></a>
+            <a href="#"><img src="../images/footer-instagram.jpg"/></a>
+            <a href="#"><img src="../images/footer-twitter.jpg"/></a>
+            <a href="#"><img src="../images/footer-youtube.jpg"/></a>
+          </div>
+          <div class="footer-social-div">
+            <p class="footer-main-block-p">ALL RIGHTS RESERVED &copy iSPARK 2016 - DESIGNED & DEVELOPED BY ENLIGHT</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+    function flexsliderInitialize(){
+      $('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: false,
+        itemWidth: 250,
+        itemMargin: 30,
+        prevText: "",
+        nextText: "",
+        start: function(slider){
+            $('.flexslider').resize();
+        }
+      });
+      $(".flexslider .slides li").mouseenter(function(){
+        $(this).children(".data").children(".line").children("hr").css("border-color", "#821638");
+        $(this).children(".overlay").slideDown("fast");
+      });
+      $(".flexslider .slides li").mouseleave(function(){
+        $(this).children(".data").children(".line").children("hr").css("border-color", "#feb041");
+        $(this).children(".overlay").slideUp("fast");
+      });
+    }
+
+    //---------- Mentors select ----------//
+    flexsliderInitialize();
+    $(".mentors select").bselect({ searchInput : false });
+    $(".mentors select").change(function() {
+      var val = $( ".mentors select option:selected" ).val();
+      if(val == "1" || val == "2" || val == "3") {
+        $(".sliders").html("");
+        $(".sliders").append('<div class="flexslider col-xs-12"><ul class="slides"></ul></div>');  
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+      }
+      flexsliderInitialize();
+    });
+    </script>
+</body>
+</html>
