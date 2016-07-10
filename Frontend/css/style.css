@@ -91,6 +91,9 @@ a:hover {
 #homeCarousel .carousel-indicators {
 	bottom: 100px;
 }
+#homeCarousel .carousel-inner .item img {
+    width: 100%;
+}
 .carousel-indicators .active {
 	width:12px;
 	height:12px;
@@ -341,7 +344,7 @@ a:hover {
 	box-shadow: none;
 	background-image: url("../images/select-arrow.png");
 }
-.partners .flexslider .slides li {
+.partners .flexslider .slides li, .progress-bars-container.flexslider .slides li {
 	padding: 10px;
     border: 1px solid #821638;
     border-radius: 10px;
@@ -577,7 +580,7 @@ a:hover {
 .title span.lowercase {
     font-family: 'Open Sans', sans-serif;
 }
-.jobs, .contact-info, .mentors, .jobs-outer {
+.jobs, .contact-info, .mentors, .jobs-outer, .jobs-inner {
     margin-top: 315px;
 }
 .contact-info > div {
@@ -1113,7 +1116,7 @@ input#password {
     line-height: 18px;
     padding-top: 8px;
 }
-.achievements .flexslider {
+.achievements .flexslider, .progress-bars-container.flexslider {
     background-color: transparent;
     border: none;
 }
@@ -1121,7 +1124,7 @@ input#password {
     width: 80px;
     margin: 0 auto;
 }
-.achievements .flex-control-paging, .mentors .flex-control-paging {
+.achievements .flex-control-paging, .mentors .flex-control-paging, .progress-bars-container .flex-control-paging, .related-jobs .flex-control-paging {
     display: none;
 }
 .achievements .flexslider li div {
@@ -1329,11 +1332,29 @@ input#password {
     transform: scaleX(-1);
     left: 0 !important;
 }
+.related-jobs .flex-nav-prev a {
+    background-image: url("../images/right-arrow2.png");
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: -60px !important;
+    height: 80px;
+    width: 60px;
+    margin-top: -45px;
+}
+.related-jobs .flex-nav-next a {
+    background-image: url("../images/right-arrow2.png");
+    right: -60px !important;
+    height: 80px;
+    width: 60px;
+    margin-top: -45px;
+}
 .achievements .flexslider .flex-nav-next a, .mentors .flexslider .flex-nav-next a {
     background-image: url("../images/right-arrow.png");
     right: 0 !important;
 }
-.achievements .flexslider .flex-direction-nav a, .mentors .flexslider .flex-direction-nav a {
+.achievements .flexslider .flex-direction-nav a, .mentors .flexslider .flex-direction-nav a, .progress-bars-container .flex-direction-nav a, .related-jobs .flex-direction-nav a {
     opacity: 1 !important;
     background-repeat: no-repeat;
     background-position: 5px 10px;
@@ -1343,7 +1364,17 @@ input#password {
     -o-transition: none;
     transition: none;
 }
-.achievements .flexslider .flex-direction-nav a:before, .mentors .flexslider .flex-direction-nav a:before {
+.progress-bars-container .flex-nav-next a {
+    right: 0 !important;
+}
+.progress-bars-container .flex-nav-prev a {
+    left: 0 !important;
+}
+.progress-bars-container .flex-direction-nav a:before {
+    color: #feb041;
+    text-shadow: none;
+}
+.achievements .flexslider .flex-direction-nav a:before, .mentors .flexslider .flex-direction-nav a:before, .related-jobs.flexslider .flex-direction-nav a:before {
     content: "";
 }
 .services .service-item {
@@ -1519,6 +1550,10 @@ input#password {
     font-size: 36px;
     font-weight: 600;
 }
+.jobs-inner .title {
+    font-size: 36px;
+    font-weight: bold;
+}
 .jobs-outer .jobs-list {
     text-align: center;
     margin-bottom: 25px;
@@ -1596,6 +1631,132 @@ input#password {
 .sticky-sidebar {
   position: relative;
   top: 0; 
+}
+.jobs-inner .icon {
+    text-align: center;
+}
+.jobs-inner .icon > div {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #821638;
+    border-radius: 30px;
+}
+.job-desc-container {
+    padding: 50px 0;
+}
+.job-desc-container > div > div {
+    border: 1px solid #821638;
+    border-radius: 30px;
+}
+.job-desc-container > div > div img {
+    width: 100%;
+    border-radius: 30px;
+}
+.job-desc-container .job-desc {
+    padding: 10px 20px;
+    height: 293px;
+}
+.job-desc-container .job-desc > div:first-child > img {
+    width: auto;
+    border-radius: 0;
+    height: 50px;
+}
+.job-desc-container .job-desc > div:first-child > div {
+    font-size: 25px;
+    font-family: 'Sketch Rockwell',sans-serif;
+    color: #821638;
+    padding: 8px 15px;
+}
+.job-desc-container > div:last-child .job-desc > div:last-child {
+    max-height: 210px;
+    overflow-y: scroll;
+}
+.job-desc-container .job-desc > div:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 15px 0;
+}
+.job-desc-container .job-desc > div span {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    margin: 2px;
+}
+.job-desc-container .job-desc > div span:nth-child(3n+1) {
+    background-color: #102b4c;
+    color: #fff;
+}
+.job-desc-container .job-desc > div span:nth-child(3n+2) {
+    background-color: #821638;
+    color: #feb041;
+}
+.job-desc-container .job-desc > div span:nth-child(3n) {
+    background-color: #feb041;
+    color: #821638;
+}
+.job-desc-container .job-desc .interests .add-btn {
+    cursor: pointer;
+}
+.pie_progress .pie_progress__number {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+}
+.dark-bg .progress-bars {
+    padding: 40px 0;
+}
+.progress-bars li >div:last-child {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    padding-top: 25px
+}
+.related-jobs.flexslider .slides li {
+    text-align: center;
+    position: relative;
+}
+.related-jobs.flexslider .slides li > div:first-child {
+    color: #102b4c;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+}
+.related-jobs.flexslider .slides li > div:last-child {
+    border: 1px solid #821638;
+    border-radius: 10px;
+    z-index: 0;
+    margin-top: -13px;
+    position: relative;
+}
+.related-jobs.flexslider .slides li > div > img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    z-index: 0;
+}
+.related-jobs.flexslider .slides li > div > button {
+    background-color: #821638;
+    box-shadow: none;
+    border: 1px solid #821638;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 20px;
+    font-family: 'Sketch Rockwell', sans-serif;
+    color: #feb041;
+    height: 50px;
+}
+.related-jobs {
+    margin: 30px 0;
 }
 
 @media (max-width: 1166px) {
