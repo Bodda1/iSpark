@@ -130,7 +130,7 @@
           </div>
           <div class="clearfix"></div>
           <div class="col-md-12 accordion-button-div">
-            <button class="accordion-button">Apply Now</button>
+            <button id="1" class="accordion-button" data-toggle="modal" data-target="#myModal">Apply Now</button>
           </div>
         </div>
         <h3 class="accordion-color-red major-accordion-h3">American University in Cairo Visit - <span class="date major-accordion-date">2016 / 06 / 15</span><span class="fa fa-chevron-up"></span></h3>
@@ -196,7 +196,7 @@
           </div>
           <div class="clearfix"></div>
           <div class="col-md-12 accordion-button-div">
-            <button class="accordion-button">Apply Now</button>
+            <button id="2" class="accordion-button" data-toggle="modal" data-target="#myModal">Apply Now</button>
           </div>
         </div>
         <h3 class="accordion-color-blue major-accordion-h3">Arab Academy for Science & Technology Visit - <span class="date major-accordion-date">2016 / 07 / 01</span><span class="fa fa-chevron-up"></span></h3>
@@ -262,10 +262,123 @@
           </div>
           <div class="clearfix"></div>
           <div class="col-md-12 accordion-button-div">
-            <button class="accordion-button">Apply Now</button>
+            <button id="3" class="accordion-button" data-toggle="modal" data-target="#myModal">Apply Now</button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- modal -->
+<div id="myModal" class="modal fade form-background" role="dialog">
+  <div class="modal-dialog">
+    <div>
+    <div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <img class="popup-form-close" src="../images/form-close.png" />
+      </button>
+    </div>
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo -->
+        <div class="col-md-12 form-logo">
+          <img src="../images/logo.png" /></a>
+        </div>
+
+        <!-- Hidden field for ID -->
+        <div class="col-md-12 hidden">
+          <p id="event-id"></p>
+        </div>
+
+        <!-- Title -->
+        <div class="col-md-12 form-title">
+          <p class="major-title-2">CAREER DISCOVERY PROGRAM 2.0</p>
+          <p>YOU'RE ONE STEP AWAY FROM AN AWESOME EXPERIENCE !!</p>
+        </div>
+
+        <!-- Form -->
+        <div class="col-md-12">
+          <form id="" method="post" class="popup-form partners">
+            <div class="col-md-4">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Name" />
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="email-pop" name="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone" />
+            </div>
+            <div class="clearfix"></div>
+            <div class="popup-form-input-div">
+                <div class="col-md-4">
+                    <input type="text" id="school" name="school" class="form-control" placeholder="School Name" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="grade" name="grade" class="form-control" placeholder="Grade Level" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="wave" name="wave" class="form-control" placeholder="Wave" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="popup-form-input-div major-dropdown">
+                <div class="col-md-4 select-container popup-form-select">
+                    <select>
+                    <option value="1">Choose a major</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+                <div class="col-md-4 select-container popup-form-select">
+                    <select>
+                    <option value="1">Choose a major</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+                <div class="col-md-4 select-container popup-form-select">
+                    <select>
+                    <option value="1">Choose a major</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-md-12 popup-form-input-div">
+                <p class="popup-checkbox-text popup-form-text-1">Have you ever joined any of iSpark events?</p>
+                <p class="popup-checkbox-text popup-form-text-2">Yes</p>
+                <input type="checkbox" value="None" id="check3" name"check3" checked />
+                <label for="check3"></label>
+                <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">No</p>
+                <input type="checkbox" value="None" id="check4" name"check4" />
+                <label for="check4"></label>
+            </div>
+            <div class="col-md-12">
+                <input type="text" id="state" name="state" class="form-control" placeholder="if yes, state it" />
+            </div>
+             <div class="col-md-12 popup-form-input-div">
+                <p class="popup-checkbox-text">*Please note that not all applicants will be able to come</p>
+            </div>
+            <div class="col-md-12 popup-form-dropdown-div">
+                <p class="popup-checkbox-text">How did you know about us?</p>
+                <div class="popup-form-select select-container">
+                  <select>
+                    <option value="1">Previous Event</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-md-12 popup-form-dropdown-div">
+                <input type="submit" value="Send" class="popup-form-submit">
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
     </div>
   </div>
 </div>
@@ -314,6 +427,13 @@ $("#accordion h3").click(function () {
     $(this).find(".fa").addClass("fa-chevron-up")
     $(this).find(".fa").removeClass("fa-chevron-down")
 });
+$("button.accordion-button").click(function () {
+    var event_id = $(this).attr("id");
+    $("#event-id").text(event_id);
+});
+$('.modal').on('hidden.bs.modal', function(){
+    $(this).find('form')[0].reset();
+})
 </script>
 
 </html>
