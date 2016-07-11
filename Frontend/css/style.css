@@ -86,10 +86,13 @@ a:hover {
     background-color: #821638 !important;
 }
 .navbar-header button {
-	margin: 62px 20px;
+	margin: 40px 20px;
 }
 #homeCarousel .carousel-indicators {
 	bottom: 100px;
+}
+#homeCarousel .carousel-inner .item img {
+    width: 100%;
 }
 .carousel-indicators .active {
 	width:12px;
@@ -221,8 +224,12 @@ a:hover {
 	font-weight: bold;
 	text-align: center;
 	padding: 15px;
-	line-height: 20px;
+	line-height: 25px;
     text-transform: uppercase;
+}
+.title span {
+    font-family: 'Sketch Rockwell', sans-serif;
+    color: #821638;
 }
 .dark-bg .title {
     color: #feb041;
@@ -337,7 +344,7 @@ a:hover {
 	box-shadow: none;
 	background-image: url("../images/select-arrow.png");
 }
-.partners .flexslider .slides li {
+.partners .flexslider .slides li, .progress-bars-container.flexslider .slides li {
 	padding: 10px;
     border: 1px solid #821638;
     border-radius: 10px;
@@ -350,8 +357,8 @@ a:hover {
     color: #fff;
     top: 0;
     margin-left: -10px;
-    width: 185px;
-    height: 185px;
+    width: 180px;
+    height: 180px;
     border-radius: 10px;
     text-align: center;
     padding: 70px 0;
@@ -444,10 +451,15 @@ a:hover {
 #endCarousel .slider-panel {
     left: 0;
     margin-left: 0;
-    padding: 0 150px;
+    padding: 0 115px;
+    margin-top: -125px;
 }
 #endCarousel .logo {
-    max-width: 250px;
+    /*max-width: 250px;*/
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 #endCarousel .text div:first-child {
     color: #fff;
@@ -529,7 +541,7 @@ a:hover {
 .more-events {
     text-align: center;
 }
-.jobs-banner {
+.jobs-banner, .jobs-outer-banner {
     background-image: url("../images/jobs_banner.jpg");
 }
 .mentors-banner {
@@ -538,7 +550,7 @@ a:hover {
 .contact-banner {
     background-image: url("../images/contact_banner.jpg");
 }
-.jobs-banner, .mentors-banner, .contact-banner {
+.jobs-banner, .mentors-banner, .contact-banner, .jobs-outer-banner {
     margin-top: 120px;
     position: absolute;
     background-repeat: no-repeat;
@@ -547,7 +559,7 @@ a:hover {
     background-size: cover;
     background-position: center;
 }
-.jobs-banner .title, .mentors-banner .title, .contact-banner .title {
+.jobs-banner .title, .mentors-banner .title, .contact-banner .title, .jobs-outer-banner .title {
     font-size: 36px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -558,14 +570,17 @@ a:hover {
     margin-top: -25px;
     margin-left: -153px;
 }
-.jobs-banner .title span, .mentors-banner .title span, .contact-banner .title span {
+.jobs-outer-banner .title {
+    margin-left: -60px;
+}
+.jobs-banner .title span, .mentors-banner .title span, .contact-banner .title span, .jobs-outer-banner .title span {
     font-family: 'Sketch Rockwell', sans-serif;
     color: #feb041;
 }
 .title span.lowercase {
     font-family: 'Open Sans', sans-serif;
 }
-.jobs, .contact-info, .mentors {
+.jobs, .contact-info, .mentors, .jobs-outer, .jobs-inner {
     margin-top: 315px;
 }
 .contact-info > div {
@@ -589,7 +604,7 @@ a:hover {
     font-family: 'Open Sans', sans-serif;
 }
 .contact-row, .profile-row {
-    padding: 25px 0;
+    padding: 35px 0;
 }
 .contact-row .contact-numbers {
     text-align: center;
@@ -796,7 +811,8 @@ input#password {
     background-color: #821638;
 }
 .footer-container {
-    padding: 30px 0px 30px 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .footer-main-block {
     text-align: center;
@@ -1100,7 +1116,7 @@ input#password {
     line-height: 18px;
     padding-top: 8px;
 }
-.achievements .flexslider {
+.achievements .flexslider, .progress-bars-container.flexslider {
     background-color: transparent;
     border: none;
 }
@@ -1108,7 +1124,7 @@ input#password {
     width: 80px;
     margin: 0 auto;
 }
-.achievements .flex-control-paging, .mentors .flex-control-paging {
+.achievements .flex-control-paging, .mentors .flex-control-paging, .progress-bars-container .flex-control-paging, .related-jobs .flex-control-paging {
     display: none;
 }
 .achievements .flexslider li div {
@@ -1316,11 +1332,29 @@ input#password {
     transform: scaleX(-1);
     left: 0 !important;
 }
+.related-jobs .flex-nav-prev a {
+    background-image: url("../images/right-arrow2.png");
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: -60px !important;
+    height: 80px;
+    width: 60px;
+    margin-top: -45px;
+}
+.related-jobs .flex-nav-next a {
+    background-image: url("../images/right-arrow2.png");
+    right: -60px !important;
+    height: 80px;
+    width: 60px;
+    margin-top: -45px;
+}
 .achievements .flexslider .flex-nav-next a, .mentors .flexslider .flex-nav-next a {
     background-image: url("../images/right-arrow.png");
     right: 0 !important;
 }
-.achievements .flexslider .flex-direction-nav a, .mentors .flexslider .flex-direction-nav a {
+.achievements .flexslider .flex-direction-nav a, .mentors .flexslider .flex-direction-nav a, .progress-bars-container .flex-direction-nav a, .related-jobs .flex-direction-nav a {
     opacity: 1 !important;
     background-repeat: no-repeat;
     background-position: 5px 10px;
@@ -1330,7 +1364,17 @@ input#password {
     -o-transition: none;
     transition: none;
 }
-.achievements .flexslider .flex-direction-nav a:before, .mentors .flexslider .flex-direction-nav a:before {
+.progress-bars-container .flex-nav-next a {
+    right: 0 !important;
+}
+.progress-bars-container .flex-nav-prev a {
+    left: 0 !important;
+}
+.progress-bars-container .flex-direction-nav a:before {
+    color: #feb041;
+    text-shadow: none;
+}
+.achievements .flexslider .flex-direction-nav a:before, .mentors .flexslider .flex-direction-nav a:before, .related-jobs.flexslider .flex-direction-nav a:before {
     content: "";
 }
 .services .service-item {
@@ -1723,26 +1767,521 @@ label:hover:before {
     right: auto;
 }
 }
-@media (max-width: 992px) and (min-width: 767px) {
-.login-header-img {
-    margin-top: 290px;
-}
-}
-@media (max-width: 767px) {
-.login-header-img {
-    margin-top: 158px;
-}
-}
 @media (max-width: 992px) {
 .login-form {
     width: 60%;
+}
+.main-header .container, .sticky .container {
+    width: 100%;
+}
+}
+@media (max-width: 933px) {
+.navbar-nav a {
+    font-size: 15px;
+}
+.navbar-header img {
+    width: 100px;
+}
+#endCarousel .logo {
+    top: 40px;
+}
+#endCarousel .text div:first-child {
+    font-size: 24px;
+}
+#endCarousel .text div:last-child {
+    font-size: 11px;
+}
+}
+@media (max-width: 860px) {
+#homeCarousel .slider-panel > div:first-child {
+    font-size: 30px;
+}
+#homeCarousel .slider-panel > div:first-child span {
+    font-size: 32px;
+}
+.slider-panel {
+    margin-top: -80px;
+}
+#homeCarousel .carousel-indicators {
+    bottom: 75px;
+}
+#endCarousel .slider-panel {
+    padding: 0 50px;
+}
+}
+@media (max-width: 800px) {
+.navbar-header img {
+    width: 90px;
+}
+}
+@media (max-width: 767px) {
+    .counter > div > div, .counter > div > div span {
+        font-size: 30px;
+    }
+    .counter > div > div:last-child {
+        font-size: 20px;
+    }
+    .main-header {
+        display: none;
+    }
+    .sticky {
+        display: block;
+    }
+    #homeCarousel {
+        top: 120px;
+    }
+    #content {
+        margin-top: 120px;
+    }
+    #homeCarousel .carousel-indicators {
+        bottom: 30px !important;
+    }
+    .down-arrow {
+        bottom: 10px;
+    }
+    .login-header-img {
+        margin-top: 158px;
+    }
+}
+@media (max-width: 690px) {
+.counter-container {
+    height: 42vw;
+}
+}
+@media (max-width: 600px) {
+#homeCarousel .slider-panel {
+    width: 400px;
+    margin-left: -200px;
+}
+#homeCarousel .slider-panel > div:first-child {
+    font-size: 20px;
+}
+#homeCarousel .slider-panel > div:first-child span {
+    font-size: 22px;
+}
+.counter {
+    padding: 80px 0;
 }
 }
 @media (max-width: 540px) {
 .footer-container {
     padding: 0px 15px 0px 15px;
 }
+#homeCarousel .slider-panel > div:last-child {
+    padding: 0;
+}
+.counter {
+    padding: 60px 0;
+}
+}
+@media (max-width: 450px) {
+.counter-container {
+    height: 50vw;
+}
+}
+@media (max-width: 400px) {
+#homeCarousel .slider-panel {
+    width: 300px;
+    margin-left: -150px;
+}
+#homeCarousel .slider-panel > div:first-child {
+    font-size: 16px;
+}
+.slider-panel > div:first-child span {
+    font-size: 18px;
+}
+#homeCarousel .slider-panel button {
+    height: 32px;
+    width: 100px;
+    font-size: 12px;
+}
+}
+.jobs-outer .title {
+    font-size: 36px;
+    font-weight: 600;
+}
+.jobs-inner .title {
+    font-size: 36px;
+    font-weight: bold;
+}
+.jobs-outer .jobs-list {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.jobs-list .job-item {
+    max-width: 180px;
+    cursor: pointer;
+    display: inline-block;
+}
+.jobs-list .job-item > div:first-child {
+    font-size: 20px;
+    font-family: 'Sketch Rockwell', sans-serif;
+    color: #821638;
+    text-align: center;
+}
+.jobs-list .job-item > div:last-child {
+    padding: 10px;
+    border: 1px solid #821638;
+    border-radius: 10px;
+}
+.jobs-list .job-item.active > div:last-child {
+    border: 3px solid #feb041;
+    margin: -2px 0;
+}
+.jobs-list .job-item img{
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+.jobs-list .job-item:hover img {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.jobs-outer .job-details {
+    border: 1px solid #821638;
+    border-radius: 10px;
+}
+.jobs-outer .job-details > div > div:first-child span {
+    font-family: 'Sketch Rockwell', sans-serif;
+}
+.jobs-outer .job-details > div > div:first-child {
+    font-size: 27px;
+    color: #102b4c;
+}
+.jobs-outer .job-details > div > div:nth-child(2) {
+    font-size: 20px;
+    font-weight: bold;
+    color: #821638;
+    padding: 15px 0;
+}
+.jobs-outer .job-details .job-types {
+    padding: 10px 0;    
+    /*max-height: 400px;*/
+    overflow-y: scroll;
+    overflow-x: visible;
+}
+.jobs-outer .job-details .job-types > div {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #821638;
+    margin-bottom: 17px;
+}
+.jobs-outer .job-details .job-types > div span {
+    background-color: #821638;
+    border-radius: 10px;
+    color: #fff;
+    padding: 8px 10px;
+    font-family: 'Open Sans', sans-serif;
+    cursor: pointer;
+}
+.sticky-sidebar {
+  position: relative;
+  top: 0; 
+}
+.jobs-inner .icon {
+    text-align: center;
+}
+.jobs-inner .icon > div {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #821638;
+    border-radius: 30px;
+}
+.job-desc-container {
+padding: 50px 0;
+}
+.job-desc-container > div > div {
+    border: 1px solid #821638;
+    border-radius: 30px;
+}
+.job-desc-container > div > div img {
+    width: 100%;
+    border-radius: 30px;
+}
+.job-desc-container .job-desc {
+    padding: 10px 20px;
+    height: 293px;
+}
+.job-desc-container .job-desc > div:first-child > img {
+    width: auto;
+    border-radius: 0;
+    height: 50px;
+}
+.job-desc-container .job-desc > div:first-child > div {
+    font-size: 25px;
+    font-family: 'Sketch Rockwell',sans-serif;
+    color: #821638;
+    padding: 8px 15px;
+}
+.job-desc-container > div:last-child .job-desc > div:last-child {
+    max-height: 210px;
+    overflow-y: scroll;
+}
+.job-desc-container .job-desc > div:last-child {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 15px 0;
+}
+.job-desc-container .job-desc > div span {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    margin: 2px;
+}
+.job-desc-container .job-desc > div span:nth-child(3n+1) {
+    background-color: #102b4c;
+    color: #fff;
+}
+.job-desc-container .job-desc > div span:nth-child(3n+2) {
+    background-color: #821638;
+    color: #feb041;
+}
+.job-desc-container .job-desc > div span:nth-child(3n) {
+    background-color: #feb041;
+    color: #821638;
+}
+.job-desc-container .job-desc .interests .add-btn {
+    cursor: pointer;
+}
+.pie_progress .pie_progress__number {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+}
+.dark-bg .progress-bars {
+    padding: 40px 0;
+}
+.progress-bars li >div:last-child {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    padding-top: 25px
+}
+.related-jobs.flexslider .slides li {
+    text-align: center;
+    position: relative;
+}
+.related-jobs.flexslider .slides li > div:first-child {
+    color: #102b4c;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+}
+.related-jobs.flexslider .slides li > div:last-child {
+    border: 1px solid #821638;
+    border-radius: 10px;
+    z-index: 0;
+    margin-top: -13px;
+    position: relative;
+}
+.related-jobs.flexslider .slides li > div > img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    z-index: 0;
+}
+.related-jobs.flexslider .slides li > div > button {
+    background-color: #821638;
+    box-shadow: none;
+    border: 1px solid #821638;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 20px;
+    font-family: 'Sketch Rockwell', sans-serif;
+    color: #feb041;
+    height: 50px;
+}
+.related-jobs {
+    margin: 30px 0;
 }
 
-
+@media (max-width: 1166px) {
+#endCarousel .text div:first-child {
+    font-size: 30px;
+}
+#endCarousel .text div:last-child {
+    font-size: 15px;
+}
+.counter-container {
+    height: 26vw;
+}
+}
+@media (max-width: 1019px) {
+#endCarousel .text div:first-child {
+    font-size: 26px;
+}
+.counter-container {
+    height: 30vw;
+}
+.counter > div > div, .counter > div > div span {
+    font-size: 50px;
+}
+.counter > div > div:last-child {
+    font-size: 28px;
+}
+}
+@media (max-width: 992px) and (min-width: 767px) {
+.login-header-img {
+    margin-top: 290px;
+}
+}
+@media (max-width: 923px) {
+.counter > div > div:last-child {
+    font-size: 22px;
+}
+.counter > div > div, .counter > div > div span {
+    font-size: 48px;
+}
+.counter-container {
+    height: 33vw;
+}
+}
+@media (min-width: 768px) {
+.navbar-right .dropdown-menu {
+    right: auto;
+}
+}
+@media (max-width: 992px) {
+.login-form {
+    width: 60%;
+}
+.main-header .container, .sticky .container {
+    width: 100%;
+}
+}
+@media (max-width: 933px) {
+.navbar-nav a {
+    font-size: 15px;
+}
+.navbar-header img {
+    width: 100px;
+}
+#endCarousel .logo {
+    top: 40px;
+}
+#endCarousel .text div:first-child {
+    font-size: 24px;
+}
+#endCarousel .text div:last-child {
+    font-size: 11px;
+}
+}
+@media (max-width: 860px) {
+#homeCarousel .slider-panel > div:first-child {
+    font-size: 30px;
+}
+#homeCarousel .slider-panel > div:first-child span {
+    font-size: 32px;
+}
+.slider-panel {
+    margin-top: -80px;
+}
+#homeCarousel .carousel-indicators {
+    bottom: 75px;
+}
+#endCarousel .slider-panel {
+    padding: 0 50px;
+}
+}
+@media (max-width: 800px) {
+.navbar-header img {
+    width: 90px;
+}
+}
+@media (max-width: 767px) {
+    .counter > div > div, .counter > div > div span {
+        font-size: 30px;
+    }
+    .counter > div > div:last-child {
+        font-size: 20px;
+    }
+    .main-header {
+        display: none;
+    }
+    .sticky {
+        display: block;
+    }
+    #homeCarousel {
+        top: 120px;
+    }
+    #content {
+        margin-top: 120px;
+    }
+    #homeCarousel .carousel-indicators {
+        bottom: 30px !important;
+    }
+    .down-arrow {
+        bottom: 10px;
+    }
+    .login-header-img {
+        margin-top: 158px;
+    }
+}
+@media (max-width: 690px) {
+.counter-container {
+    height: 42vw;
+}
+}
+@media (max-width: 600px) {
+#homeCarousel .slider-panel {
+    width: 400px;
+    margin-left: -200px;
+}
+#homeCarousel .slider-panel > div:first-child {
+    font-size: 20px;
+}
+#homeCarousel .slider-panel > div:first-child span {
+    font-size: 22px;
+}
+.counter {
+    padding: 80px 0;
+}
+}
+@media (max-width: 540px) {
+.footer-container {
+    padding: 0px 15px 0px 15px;
+}
+#homeCarousel .slider-panel > div:last-child {
+    padding: 0;
+}
+.counter {
+    padding: 60px 0;
+}
+}
+@media (max-width: 450px) {
+.counter-container {
+    height: 50vw;
+}
+}
+@media (max-width: 400px) {
+#homeCarousel .slider-panel {
+    width: 300px;
+    margin-left: -150px;
+}
+#homeCarousel .slider-panel > div:first-child {
+    font-size: 16px;
+}
+.slider-panel > div:first-child span {
+    font-size: 18px;
+}
+#homeCarousel .slider-panel button {
+    height: 32px;
+    width: 100px;
+    font-size: 12px;
+}
+}
 
