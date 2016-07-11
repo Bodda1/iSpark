@@ -192,7 +192,7 @@ a:hover {
     font-size: 18px;
     margin: 7px;
 }
-#homeCarousel .slider-panel button:last-child {
+#homeCarousel .slider-panel button:hover {
 	background-color: #821638;
     color: #feb041;
     border: 1px solid #821638
@@ -273,6 +273,14 @@ a:hover {
 }
 .counter-container {
     height: 23vw;
+}
+.banner-container .banner.illustration {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
 }
 .banner {
 	position: absolute;
@@ -384,6 +392,8 @@ a:hover {
     margin: 0;
     padding: 95px 0;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .counter > div {
 	text-align: center;
@@ -453,6 +463,9 @@ a:hover {
     margin-left: 0;
     padding: 0 115px;
     margin-top: -125px;
+}
+#endCarousel .item img {
+    width: 100%;
 }
 #endCarousel .logo {
     /*max-width: 250px;*/
@@ -534,7 +547,7 @@ a:hover {
     font-size: 22px;
     margin: 7px;
 }
-.submit-btn button:hover, .more-events button:hover, #testCarousel button:hover, .job-item button:hover, .major-item button:hover, .announcements button:hover {
+.message .submit-btn:hover, .submit-btn button:hover, .more-events button:hover, #testCarousel button:hover, .job-item button:hover, .major-item button:hover, .announcements button:hover {
     background-color: #821638;
     color: #fff;
 }
@@ -579,6 +592,7 @@ a:hover {
 }
 .title span.lowercase {
     font-family: 'Open Sans', sans-serif;
+    color: inherit;
 }
 .jobs, .contact-info, .mentors, .jobs-outer, .jobs-inner {
     margin-top: 315px;
@@ -586,17 +600,37 @@ a:hover {
 .contact-info > div {
     text-align: center;
 }
+.contact-row .contact-item {
+    height: 200px;
+}
+.contact-row .contact-item p {
+    font-weight: bold !important;
+    font-size: 20px;
+    line-height: 23px;
+    margin: 17px 0;
+}
 .contact-info .contact-item {
     text-align: center;
     display: inline-block;
     border: 1px solid #821638;
-    padding: 5px 40px 5px 40px;
+    padding: 5px 30px 5px 30px;
     border-radius: 10px;
     margin: 30px;
 }
 .contact-info .contact-item img {
-    width: 50px;
+    width: 70px;
     padding: 10px;
+}
+.contact-row .contact-item img {
+    margin-top: 10px;
+}
+.contact-row .contact-item div {
+    display: table;
+    height: 100px;
+}
+.contact-row .contact-item div p {
+    display: table-cell;
+    vertical-align: middle;
 }
 .contact-info .contact-item p {
     color: #831538;
@@ -639,6 +673,9 @@ a:hover {
 .jobs .job-item, .jobs .major-item {
     padding-top: 40px;
     padding-bottom: 60px;
+}
+.jobs .job-item:first-child img {
+    cursor: pointer;
 }
 .jobs .job-item img, .jobs .major-item img {
     max-width: 150px;
@@ -686,15 +723,19 @@ a:hover {
 }
 .message input::-webkit-input-placeholder, .message textarea::-webkit-input-placeholder {
    color: #feb041;
+   font-size: 18px;
 }
 .message input:-moz-placeholder, .message textarea:-moz-placeholder { /* Firefox 18- */
    color: #feb041;  
+   font-size: 18px;
 }
 .message input::-moz-placeholder, .message textarea::-moz-placeholder {  /* Firefox 19+ */
    color: #feb041;  
+   font-size: 18px;
 }
 .message input:-ms-input-placeholder, .message textarea:-ms-input-placeholder {  
    color: #feb041;  
+   font-size: 18px;
 }
 .message form input {
     background-color: transparent;
@@ -1324,13 +1365,21 @@ input#password {
 .job-more-div-margin {
     margin-bottom: 40px;
 }
-.achievements .flexslider .flex-nav-prev a, .mentors .flexslider .flex-nav-prev a {
+.achievements .flexslider .flex-nav-prev a {
     background-image: url("../images/right-arrow.png");
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     left: 0 !important;
+}
+.mentors .flexslider .flex-nav-prev a {
+    background-image: url("../images/right-arrow.png");
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: -33px !important;
 }
 .related-jobs .flex-nav-prev a {
     background-image: url("../images/right-arrow2.png");
@@ -1350,9 +1399,13 @@ input#password {
     width: 60px;
     margin-top: -45px;
 }
-.achievements .flexslider .flex-nav-next a, .mentors .flexslider .flex-nav-next a {
+.achievements .flexslider .flex-nav-next a {
     background-image: url("../images/right-arrow.png");
     right: 0 !important;
+}
+.mentors .flexslider .flex-nav-next a {
+    background-image: url("../images/right-arrow.png");
+    right: -33px !important;
 }
 .achievements .flexslider .flex-direction-nav a, .mentors .flexslider .flex-direction-nav a, .progress-bars-container .flex-direction-nav a, .related-jobs .flex-direction-nav a {
     opacity: 1 !important;
@@ -1381,6 +1434,7 @@ input#password {
     padding: 25px 0;
     border: 1px solid #feb041;
     border-radius: 10px;
+    margin: 10px 0;
 }
 .services .service-item > div img {
     width: 100%;
@@ -1439,7 +1493,10 @@ input#password {
     position: relative;
     opacity: 1;
 }
-.events #eventsCarousel .carousel-control span, .events #eventsCarousel .carousel-control span strong {
+.events #eventsCarousel .carousel-control span:hover {
+    font-weight: bold;
+}
+.events #eventsCarousel .carousel-control span {
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
 }
@@ -1484,8 +1541,8 @@ input#password {
     border-radius: 50%;
 }
 .mentors .flexslider .overlay {
-    width: 250px;
-    height: 250px;
+    width: 265px;
+    height: 265px;
     border-radius: 50%;
     border: 10px solid rgb(130, 22, 56);
     margin-left: 0px;
@@ -1618,7 +1675,7 @@ input#password {
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
     color: #821638;
-    margin-bottom: 17px;
+    margin-bottom: 2px;
 }
 .jobs-outer .job-details .job-types > div span {
     background-color: #821638;
@@ -1627,6 +1684,7 @@ input#password {
     padding: 8px 10px;
     font-family: 'Open Sans', sans-serif;
     cursor: pointer;
+    display: inline-block;
 }
 .sticky-sidebar {
   position: relative;
@@ -1759,6 +1817,11 @@ input#password {
     margin: 30px 0;
 }
 
+@media (max-width: 1199px) {
+    .sticky .navbar-nav > li > a {
+        font-size: 15px;
+    }
+}
 @media (max-width: 1166px) {
 #endCarousel .text div:first-child {
     font-size: 30px;
@@ -1798,6 +1861,12 @@ input#password {
 }
 .counter-container {
     height: 33vw;
+}
+}
+@media (max-width: 900px) {
+.sticky .navbar-nav > li > a {
+    font-size: 13px;
+    padding: 15px 10px;
 }
 }
 @media (min-width: 768px) {

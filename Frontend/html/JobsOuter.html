@@ -15,6 +15,7 @@
     <script src="../js/bselect.min.js"></script>
     <script src="../js/jquery.animateNumber.min.js"></script>
     <script src="../js/jquery.visible.min.js"></script>
+    <script src="../js/jquery.jrumble.1.3.min.js"></script>
 </head>
 <body>
 
@@ -187,14 +188,25 @@
       </div>
     </footer>
     <script>
+    // Jobs inner navigation //
     function chooseJob() {
       window.location.href = "../html/JobsInner.html";
     }
 
     function calcSidebarHeight() {
-      $('.sticky-sidebar').css("height", $(window).height() - headerHeight);
-      $('.sticky-sidebar .job-types').css("height", $('.sticky-sidebar').height() - $('.sticky-sidebar > div > div:nth-child(1)').outerHeight() - $('.sticky-sidebar > div > div:nth-child(2)').outerHeight());
+      $('.sticky-sidebar').css("height", $(window).height() - headerHeight - 30);
+      $('.sticky-sidebar .job-types').css("height", $('.sticky-sidebar').height() - $('.sticky-sidebar > div > div:nth-child(1)').outerHeight() - $('.sticky-sidebar > div > div:nth-child(2)').outerHeight() - 30);
     }
+
+    // Sidebar item animation //
+    function wiggle(elem) {
+      $(elem)
+        .animate({'left':(-10)+'px'},200)
+        .animate({'left':(+20)+'px'},200)
+        .animate({'left':(-10)+'px'},200);
+    };
+
+    // Job item click event //
     $(".job-item").click(function() {
       $(".job-item").removeClass("active");
       $(this).addClass("active");
@@ -225,7 +237,7 @@
           var sidebarBottom = stickySidebar.offset().top + stickyHeight,
               stickyStop = $('.main-content').offset().top + $('.main-content').height();
           if (stickyStop < sidebarBottom) {
-            var stopPosition = $('.main-content').height() - stickyHeight - headerHeight;
+            var stopPosition = $('.main-content').height() - stickyHeight - headerHeight - 30;
             stickySidebar.css('top', stopPosition);
           }
         }
@@ -244,6 +256,20 @@
         calcSidebarHeight();
       }
     });
+
+    $(document).ready(function(){
+      // Wiggle effect when hovering on a sidebar item //
+      $('.sticky-sidebar .job-types > div > span').jrumble({
+        x: 2,
+        y: 2,
+        rotation: 1
+      });
+      $(".sticky-sidebar .job-types > div > span").hover(function(){
+        $(this).trigger('startRumble');
+        }, function(){
+          $(this).trigger('stopRumble');
+        });
+    })
     </script>
 </body>
 </html>

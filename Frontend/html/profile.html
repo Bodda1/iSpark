@@ -375,7 +375,7 @@
               </a>
               <a class="right carousel-control pull-right" href="#eventsCarousel" role="button" data-slide="next">
                 <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-                <span><strong>Next Event ></strong></span>
+                <span>Next Event ></span>
               </a>
               <div class="clear"></div>
             </div>
@@ -467,9 +467,18 @@
       });
 
       //---------- Calendar ----------//
-      var event={id:1 , title: 'Birthday Party', start:  new Date()};
-      $('#calendar').fullCalendar();
-      $('#calendar').fullCalendar( 'renderEvent', event );
+
+      $('#calendar').fullCalendar({
+        //--- Event click function ---//
+        eventClick: function(calEvent, jsEvent, view) {
+          var event_id = calEvent.id;
+          $(this).css('background-color', '#821638');
+        }
+      });
+
+      //--- Adding an event ---//
+      var event={ id:111111, title: 'Birthday Party', start: new Date() };
+      $('#calendar').fullCalendar( 'renderEvent', event, true );
     });
     </script>
 </body>
