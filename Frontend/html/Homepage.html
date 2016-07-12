@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="../css/bselect.min.css">
+    <link rel='stylesheet' href='../css/fullcalendar.min.css' />
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 
@@ -14,6 +15,8 @@
     <script src="../js/bselect.min.js"></script>
     <script src="../js/jquery.animateNumber.min.js"></script>
     <script src="../js/jquery.visible.min.js"></script>
+    <script src='../js/moment.min.js'></script>
+    <script src='../js/fullcalendar.min.js'></script>
 </head>
 <body>
 
@@ -467,7 +470,7 @@
       </div>
     </div>
     <div class="more-events">
-      <button>View All Events</button>
+      <button type="button" id="all-events-btn" data-toggle="modal" data-target="#allEventsModal">View All Events</button>
     </div>
   </div>
   <footer>
@@ -499,6 +502,25 @@
       </div>
     </div>
   </footer>
+
+<!-- View all events popup -->
+<div id="allEventsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Events Calendar</h4>
+      </div>
+      <div class="modal-body">
+        <div id="calendar"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 </body>
 <script>
@@ -617,5 +639,30 @@ $(document).ready(function(){
 
 });
 
+$('#allEventsModal').on('shown.bs.modal', function() {
+  $("#calendar").fullCalendar('destroy');
+  //---------- Calendar ----------//
+  $('#calendar').fullCalendar({
+    aspectRatio: 3,
+    //--- Event click function ---//
+    eventClick: function(event) {
+        if (event.url) {
+            window.open(event.url);
+            return false;
+        }
+    }
+  });
+
+  //--- Adding an event ---//
+  var event1 = { id:"1", title: 'Event 1', start: '2016-07-11', url: '../html/majorexploration.html' };
+  var event2 = { id:"2", title: 'Event 2', start: '2016-07-30', url: '../html/JobShadowing&InternshipOuter.html' };
+  var event3 = { id:"3", title: 'Event 3', start: '2016-08-30', url: '../html/conferences.html' };
+  $('#calendar').fullCalendar( 'renderEvent', event1, true );
+  $('#calendar').fullCalendar( 'renderEvent', event2, true );
+  $('#calendar').fullCalendar( 'renderEvent', event3, true );
+
+  //---------- Set initial active event ----------//
+  var curr_event = $("#calendar").fullCalendar('clientEvents', $(".item.active").attr("id"));
+});
 </script>
 </html>
