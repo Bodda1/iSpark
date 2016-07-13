@@ -14,6 +14,7 @@
     <script src="../js/bselect.min.js"></script>
     <script src="../js/jquery.animateNumber.min.js"></script>
     <script src="../js/jquery.visible.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="../js/jquery.gmap.min.js"></script>
 </head>
@@ -103,18 +104,18 @@
       <div class="sub-title col-xs-12">
         <a href="#">Drop us an email</a>
       </div>
-      <form class="col-xs-12 col-md-8 col-md-offset-2">
+      <form id="contact-form" class="col-xs-12 col-md-8 col-md-offset-2">
         <div class="form-group col-xs-12 col-md-4">
-          <input class="full-width" placeholder="Name" />
+          <input class="full-width" name="Name" placeholder="Name" />
         </div>
         <div class="form-group col-xs-12 col-md-4">
-          <input class="full-width" placeholder="Email" />
+          <input class="full-width" name="Email" placeholder="Email" />
         </div>
         <div class="form-group col-xs-12 col-md-4">
-          <input class="full-width" placeholder="Number" />
+          <input class="full-width" name="Number" placeholder="Number" />
         </div>
         <div class="form-group col-xs-12">
-          <textarea class="full-width" placeholder="Type your message here"></textarea>
+          <textarea class="full-width" name="Message" placeholder="Type your message here"></textarea>
         </div>
         <div class="form-group col-xs-12 col-md-4 pull-right">
           <input class="full-width submit-btn" type="submit" value="Send Message" />
@@ -204,6 +205,15 @@
       zoom: 15
     }
     $('#map').gMap(options);
+
+    $("#contact-form").validate({
+      rules: {
+        Name: "required",
+        Email: { required: true, email: true },
+        Number: "required",
+        Message: "required"
+      }
+     });
   </script>
 
 

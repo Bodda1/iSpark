@@ -224,7 +224,7 @@ a:hover {
 	font-weight: bold;
 	text-align: center;
 	padding: 15px;
-	line-height: 25px;
+	line-height: 30px;
     text-transform: uppercase;
 }
 .title span {
@@ -811,6 +811,7 @@ a:hover {
     padding-bottom: 10px;
     border-bottom: 3px solid #821638;
     margin-bottom: 10px;
+    text-align: left;
 }
 .login-form-input {
     border-color: #821638 !important;
@@ -819,6 +820,7 @@ a:hover {
 }
 .login-form-input-div {
     margin-bottom: 10px;
+    text-align: left;
 }
 .login-form-button {
     width: 100%;
@@ -1178,7 +1180,7 @@ input#password {
 }
 .team-person-img-border {
     border: 10px solid #821638;
-    border-radius: 127px;
+    border-radius: 50%;
 }
 .team-person-img-apply {
     width: 255px;
@@ -1241,13 +1243,28 @@ input#password {
 .team-img-overlay {
     display: none;
     position: absolute;
-    width: 235px;
-    height: 235px;
-    border: 1px solid #feb041;
-    border-radius: 116px;
-    padding-top: 95px;
+    width: 255px;
+    height: 255px;
+    border: 10px solid rgb(130, 22, 56);
+    border-radius: 50%;
     background: #821638;
-    top: 10px;
+    top: 0;
+    left: 15px;
+    cursor: pointer;
+}
+.team-img-overlay > div {
+    height: 100%;
+    padding: 20px;
+    border: 2px solid #feb041;
+    border-radius: 50%;
+}
+.team-img-overlay > div> img {
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -25px;
 }
 .job .bselect {
     width: 435px;
@@ -1418,10 +1435,10 @@ input#password {
     transition: none;
 }
 .progress-bars-container .flex-nav-next a {
-    right: 0 !important;
+    right: -33px !important;
 }
 .progress-bars-container .flex-nav-prev a {
-    left: 0 !important;
+    left: -33px !important;
 }
 .progress-bars-container .flex-direction-nav a:before {
     color: #feb041;
@@ -1550,6 +1567,7 @@ input#password {
     border: 10px solid rgb(130, 22, 56);
     margin-left: 0px;
     padding: 0 !important;
+    cursor: pointer;
 }
 .mentors .flexslider .overlay > div {
     height: 100%;
@@ -1678,12 +1696,16 @@ input#password {
 }
 /* Base for label styling */
 [type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
+[type="checkbox"]:checked,
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
   position: absolute;
   left: -9999px;
 }
 [type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
   position: relative;
   top: -10px;
   padding-left: 25px;
@@ -1691,7 +1713,9 @@ input#password {
 }
 /* checkbox aspect */
 [type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
+[type="checkbox"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
   content: '';
   position: absolute;
   left:0; top: 2px;
@@ -1703,7 +1727,9 @@ input#password {
 }
 /* checked mark aspect */
 [type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
   content: '✔';
   position: absolute;
   top: 3px; left: 4px;
@@ -1713,30 +1739,38 @@ input#password {
   transition: all .2s;
 }
 /* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after {
   opacity: 0;
   transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after {
   opacity: 1;
   transform: scale(1);
 }
 /* disabled checkbox */
 [type="checkbox"]:disabled:not(:checked) + label:before,
-[type="checkbox"]:disabled:checked + label:before {
+[type="checkbox"]:disabled:checked + label:before,
+[type="radio"]:disabled:not(:checked) + label:before,
+[type="radio"]:disabled:checked + label:before {
   box-shadow: none;
   border-color: #821638;
   background-color: #821638;
 }
-[type="checkbox"]:disabled:checked + label:after {
+[type="checkbox"]:disabled:checked + label:after,
+[type="radio"]:disabled:checked + label:after {
   color: #999;
 }
-[type="checkbox"]:disabled + label {
+[type="checkbox"]:disabled + label,
+[type="radio"]:disabled + label {
   color: #aaa;
 }
 /* accessibility */
 [type="checkbox"]:checked:focus + label:before,
-[type="checkbox"]:not(:checked):focus + label:before {
+[type="checkbox"]:not(:checked):focus + label:before,
+[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
   border: 2px solid #821638;
 }
 /* hover style just for information */
@@ -1756,6 +1790,7 @@ label:hover:before {
     display: inline-block;
     margin: 0px !important;
     margin-left: 60px !important;
+    text-align: left !important;
 }
 .popup-form-select .bselect-label {
     height: 30px !important;
@@ -1786,11 +1821,11 @@ label:hover:before {
     border-radius: 10px !important;
     float: right;
 }
-.modal-dialog {
+#myModal .modal-dialog {
     width: 100%;
     margin: 0px;
 }
-.modal {
+#myModal.modal {
     z-index: 100000;
     padding: 0px !important;
 }
@@ -1907,7 +1942,10 @@ label:hover:before {
     border-radius: 30px;
 }
 .job-desc-container {
-padding: 50px 0;
+    padding: 50px 0;
+}
+.job-desc-container > div {
+    margin: 10px 0;
 }
 .job-desc-container > div > div {
     border: 1px solid #821638;
@@ -2025,6 +2063,23 @@ padding: 50px 0;
 }
 .fc-event-container {
     cursor: pointer;
+}
+.error {
+    color: red;
+    text-shadow: none;
+    font-weight: normal;
+}
+#major-exploration-form .error, #conferences-form .error {
+    color: #fff;
+}
+#major-exploration-form input.form-control, #conferences-form input.form-control {
+    color: #821638;
+}
+#imageModal {
+    z-index: 100000;
+}
+#imageModal .magnified-image {
+    width: 100%;
 }
 
 @media (max-width: 1199px) {
@@ -2158,6 +2213,11 @@ padding: 50px 0;
     }
     .login-header-img {
         margin-top: 158px;
+    }
+    .team-img-overlay {
+        width: 416px;
+        height: 416px;
+        cursor: pointer;
     }
 }
 @media (max-width: 690px) {

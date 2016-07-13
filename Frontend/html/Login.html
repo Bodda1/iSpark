@@ -7,6 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -123,6 +124,13 @@
               $(this).css("background", "url('../images/pass-lock.jpg') no-repeat right");
           }
       }
+  });
+
+  $("#loginform").validate({
+    rules: {
+      Email: { required: true, email: true },
+      Password: "required"
+    }
   });
 </script>
 </html>

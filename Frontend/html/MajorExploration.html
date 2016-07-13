@@ -12,6 +12,7 @@
     <script src="../js/bselect.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>  
+    <script src="../js/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -300,7 +301,7 @@
 
         <!-- Form -->
         <div class="col-md-12">
-          <form id="" method="post" class="popup-form partners">
+          <form id="major-exploration-form" method="post" class="popup-form partners">
             <div class="col-md-4">
               <input type="text" id="name" name="name" class="form-control" placeholder="Name" />
             </div>
@@ -325,21 +326,21 @@
             <div class="clearfix"></div>
             <div class="popup-form-input-div major-dropdown">
                 <div class="col-md-4 select-container popup-form-select">
-                    <select>
+                  <select name="select1">
                     <option value="1">Choose a major</option>
                     <option value="2">Another Option</option>
                     <option value="3">Third Option</option>
                   </select>
                 </div>
                 <div class="col-md-4 select-container popup-form-select">
-                    <select>
+                  <select name="select2">
                     <option value="1">Choose a major</option>
                     <option value="2">Another Option</option>
                     <option value="3">Third Option</option>
                   </select>
                 </div>
                 <div class="col-md-4 select-container popup-form-select">
-                    <select>
+                  <select name="select3">
                     <option value="1">Choose a major</option>
                     <option value="2">Another Option</option>
                     <option value="3">Third Option</option>
@@ -349,10 +350,10 @@
             <div class="col-md-12 popup-form-input-div">
                 <p class="popup-checkbox-text popup-form-text-1">Have you ever joined any of iSpark events?</p>
                 <p class="popup-checkbox-text popup-form-text-2">Yes</p>
-                <input type="checkbox" value="None" id="check3" name"check3" checked />
+                <input type="radio" value="None" id="check3" name="check3" checked />
                 <label for="check3"></label>
                 <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">No</p>
-                <input type="checkbox" value="None" id="check4" name"check4" />
+                <input type="radio" value="None" id="check4" name="check3" />
                 <label for="check4"></label>
             </div>
             <div class="col-md-12">
@@ -364,7 +365,7 @@
             <div class="col-md-12 popup-form-dropdown-div">
                 <p class="popup-checkbox-text">How did you know about us?</p>
                 <div class="popup-form-select select-container">
-                  <select>
+                  <select name="select4">
                     <option value="1">Previous Event</option>
                     <option value="2">Another Option</option>
                     <option value="3">Third Option</option>
@@ -434,6 +435,32 @@ $("button.accordion-button").click(function () {
 $('.modal').on('hidden.bs.modal', function(){
     $(this).find('form')[0].reset();
 })
+
+$.validator.addMethod("valueNotEquals", function(value, element, arg){
+  return arg != value;
+ }, "This field is required.");
+
+$("#major-exploration-form").validate({
+  rules: {
+    name: "required",
+    email: { required: true, email: true },
+    phone: "required",
+    school: "required",
+    grade: "required",
+    wave: "required",
+    select1: { valueNotEquals: "1" },
+    select2: { valueNotEquals: "1" },
+    select3: { valueNotEquals: "1" },
+    select4: { valueNotEquals: "1" }
+  },
+  errorPlacement: function(error, element) {
+    if(element.attr("name") == "select1" || element.attr("name") == "select2" || element.attr("name") == "select3" || element.attr("name") == "select4") {
+      error.insertAfter(element.parent().children(".bselect"));
+    } else {
+      error.insertAfter(element);
+    }
+  }
+});
 </script>
 
 </html>
