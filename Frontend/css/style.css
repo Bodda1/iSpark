@@ -769,6 +769,8 @@ a:hover {
     background-image: url("../images/loginHeader.jpg");
     margin-top: 120px;
     width: 100%;
+    background-size: cover;
+    background-position: center;
 }
 .login-header-img p{
     text-align: center;
@@ -1249,7 +1251,7 @@ input#password {
     border-radius: 50%;
     background: #821638;
     top: 0;
-    left: 15px;
+    margin-left: -15px;
     cursor: pointer;
 }
 .team-img-overlay > div {
@@ -1833,7 +1835,7 @@ label:hover:before {
     opacity: 1 !important;
 }
 .major-dropdown .select-container {
-    margin-left: 0px !important;
+    margin: 10px 0 !important;
 }
 .major-dropdown .bselect {
     width: 100%;
@@ -2086,6 +2088,10 @@ label:hover:before {
     .sticky .navbar-nav > li > a {
         font-size: 15px;
     }
+    .team-img-overlay {
+        width: 205px;
+        height: 205px;
+    }
 }
 @media (max-width: 1166px) {
 #endCarousel .text div:first-child {
@@ -2112,10 +2118,19 @@ label:hover:before {
     font-size: 28px;
 }
 }
-@media (max-width: 992px) and (min-width: 767px) {
+/*@media (max-width: 992px) and (min-width: 767px) {
 .login-header-img {
     margin-top: 290px;
 }
+}*/
+@media (max-width: 992px) {
+    .team-img-overlay {
+        width: 330px;
+        height: 330px;
+    }
+    .popup-form-input-div {
+        margin-top: 0px;
+    }
 }
 @media (max-width: 923px) {
 .counter > div > div:last-child {
@@ -2211,13 +2226,12 @@ label:hover:before {
     .down-arrow {
         bottom: 10px;
     }
-    .login-header-img {
+    /*.login-header-img {
         margin-top: 158px;
-    }
-    .team-img-overlay {
-        width: 416px;
-        height: 416px;
-        cursor: pointer;
+    }*/
+    .team-person-img-border {
+        width: 330px;
+        margin: 0 auto;
     }
 }
 @media (max-width: 690px) {
