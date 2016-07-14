@@ -47,15 +47,15 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Programs <!--<span class="caret"></span>--></a>
                     <ul class="dropdown-menu">
                       <li><a href="../html/majorexploration.html">Major Exploration</a></li>
-                      <li><a href="#">Job Shadowing & Internships</a></li>
+                      <li><a href="../html/jobshadowing&internshipouter.html">Job Shadowing & Internships</a></li>
                       <li><a href="../html/conferences.html">Conferences</a></li>
                     </ul>
                   </li>
                   <li><a href="../html/jobs&majors.html">Jobs & Majors</a></li>
                   <li class="active"><a href="#">Mentors</a></li>
-                  <li><a href="#">Team</a></li>
+                  <li><a href="../html/team.html">Team</a></li>
                   <li><a href="../html/contact.html">Contact Us</a></li>
-                  <li class="logged-in"><a href="#">Welcome, Mostafa</a></li>
+                  <li class="logged-in"><a href="#">Welcome, Abdel Rahman</a></li>
                 </ul>
               </div>
             </div>
@@ -89,7 +89,7 @@
           <div class="flexslider col-xs-12">
             <ul class="slides">
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -113,7 +113,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -137,7 +137,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -161,7 +161,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -185,7 +185,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -209,7 +209,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -233,7 +233,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -257,7 +257,7 @@
                 </div>
               </li>
               <li>
-                <div class="overlay">
+                <div class="overlay" onclick="openModal(this)">
                   <div>
                     <img src="../images/zoom.png" />
                   </div>
@@ -315,12 +315,35 @@
         </div>
       </div>
     </footer>
+
+<!-- Image popup -->
+<div id="imageModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-md">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <div>
+          <img class="magnified-image" src="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
     <script>
+    //---------- Open image popup ----------//
+    function openModal(elem){
+      var image = $(elem).parent().children("img").attr("src");
+      $("#imageModal .magnified-image").attr("src", image);
+      $('#imageModal').modal();
+    }
+
+    //---------- Initializing mentors slider ----------//
     function flexsliderInitialize(){
       $('.flexslider').flexslider({
         animation: "slide",
         animationLoop: false,
-        itemWidth: 250,
+        itemWidth: 265,
         itemMargin: 30,
         prevText: "",
         nextText: "",
@@ -346,14 +369,14 @@
       if(val == "1" || val == "2" || val == "3") {
         $(".sliders").html("");
         $(".sliders").append('<div class="flexslider col-xs-12"><ul class="slides"></ul></div>');  
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
       }
       flexsliderInitialize();
     });

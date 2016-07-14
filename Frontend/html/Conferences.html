@@ -12,6 +12,7 @@
     <script src="../js/bselect.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/jquery-ui.min.js"></script>  
+    <script src="../js/jquery.validate.min.js"></script>
 </head>
 <body>
 
@@ -34,13 +35,13 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Programs <!--<span class="caret"></span>--></a>
             <ul class="dropdown-menu">
               <li><a href="../html/majorexploration.html">Major Exploration</a></li>
-              <li><a href="#">Job Shadowing & Internships</a></li>
+              <li><a href="../html/jobshadowing&internshipouter.html">Job Shadowing & Internships</a></li>
               <li class="active"><a href="../html/conferences.html">Conferences</a></li>
             </ul>
           </li>
           <li><a href="../html/jobs&majors.html">Jobs & Majors</a></li>
           <li><a href="../html/mentors.html">Mentors</a></li>
-          <li><a href="#">Team</a></li>
+          <li><a href="../html/team.html">Team</a></li>
           <li><a href="../html/contact.html">Contact Us</a></li>
           <li><a href="../html/login.html">Login</a></li>
         </ul>
@@ -269,7 +270,7 @@
 
         <!-- Form -->
         <div class="col-md-12">
-          <form id="" method="post" class="popup-form">
+          <form id="conferences-form" method="post" class="popup-form">
             <div class="col-md-4">
                 <input type="text" id="name" name="name" class="form-control" placeholder="Name" />
             </div>
@@ -293,21 +294,30 @@
             </div>
             <div class="col-md-12 popup-form-input-div">
                 <p class="popup-checkbox-text popup-form-text-1">Method of Payment:</p>
-                <p class="popup-checkbox-text popup-form-text-2">Pay at our Location</p>
-                <input type="checkbox" value="None" id="check1" name"check1" checked />
-                <label for="check1"></label>
-                <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">Needs a Runner - 25 EGP Addional fees</p>
-                <input type="checkbox" value="None" id="check2" name"check2" />
-                <label for="check2"></label>
+                <label>
+                  <p class="popup-checkbox-text popup-form-text-2">Pay at our Location</p>
+                  <input type="radio" value="None" id="check1" name="check1" checked />
+                  <label for="check1"></label>
+                </label>
+                <label>
+                  <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">Needs a Runner - 25 EGP Addional fees</p>
+                  <input type="radio" value="None" id="check2" name="check1" />
+                  <label for="check2"></label>
+                </label>
             </div>
             <div class="col-md-12 popup-form-input-div">
                 <p class="popup-checkbox-text popup-form-text-1">Have you ever joined any of iSpark events?</p>
-                <p class="popup-checkbox-text popup-form-text-2">Yes</p>
-                <input type="checkbox" value="None" id="check3" name"check3" checked />
-                <label for="check3"></label>
-                <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">No</p>
-                <input type="checkbox" value="None" id="check4" name"check4" />
-                <label for="check4"></label>
+                <label>
+                  <p class="popup-checkbox-text popup-form-text-2">Yes</p>
+                  <input type="radio" value="None" id="check3" name="check3" checked />
+                  <label for="check3"></label>
+                </label>
+                <label>
+                  <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">No</p>
+                  <input type="radio" value="None" id="check4" name="check3" />
+                  <label for="check4"></label>
+                </label>
+                
             </div>
             <div class="col-md-12 popup-form-input-div">
                 <input type="text" id="state" name="state" class="form-control" placeholder="if yes, state it" />
@@ -318,7 +328,7 @@
             <div class="col-md-12 partners popup-form-dropdown-div">
                 <p class="popup-checkbox-text">How did you know about us?</p>
                 <div class="popup-form-select select-container">
-                  <select>
+                  <select name="select1">
                     <option value="1">Previous Event</option>
                     <option value="2">Another Option</option>
                     <option value="3">Third Option</option>
@@ -414,6 +424,29 @@ $("button.accordion-button").click(function () {
 $('.modal').on('hidden.bs.modal', function(){
     $(this).find('form')[0].reset();
 })
+
+$.validator.addMethod("valueNotEquals", function(value, element, arg){
+  return arg != value;
+ }, "This field is required.");
+
+$("#conferences-form").validate({
+  rules: {
+    name: "required",
+    email: { required: true, email: true },
+    phone: "required",
+    school: "required",
+    grade: "required",
+    wave: "required",
+    select1: { valueNotEquals: "1" }
+  },
+  errorPlacement: function(error, element) {
+    if(element.attr("name") == "select1") {
+      error.insertAfter(element.parent().children(".bselect"));
+    } else {
+      error.insertAfter(element);
+    }
+  }
+});
 </script>
 
 </html>

@@ -14,6 +14,7 @@
     <script src="../js/bselect.min.js"></script>
     <script src="../js/jquery.animateNumber.min.js"></script>
     <script src="../js/jquery.visible.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script src="../js/jquery.gmap.min.js"></script>
 </head>
@@ -41,13 +42,13 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Programs <!--<span class="caret"></span>--></a>
                     <ul class="dropdown-menu">
                       <li><a href="../html/majorexploration.html">Major Exploration</a></li>
-                      <li><a href="#">Job Shadowing & Internships</a></li>
+                      <li><a href="../html/jobshadowing&internshipouter.html">Job Shadowing & Internships</a></li>
                       <li><a href="../html/conferences.html">Conferences</a></li>
                     </ul>
                   </li>
                   <li><a href="../html/jobs&majors.html">Jobs & Majors</a></li>
                   <li><a href="../html/mentors.html">Mentors</a></li>
-                  <li><a href="#">Team</a></li>
+                  <li><a href="../html/team.html">Team</a></li>
                   <li class="active"><a href="#">Contact Us</a></li>
                   <li><a href="../html/login.html">Login</a></li>
                 </ul>
@@ -76,15 +77,21 @@
       <div class="row">
         <div class="contact-item">
           <img src="../images/office.png"/>
-          <p class="footer-main-block-p-1">Villa 56, Street 21</br>Settlement 5</br>Cairo, Egypt</p>
+          <div>
+            <p class="footer-main-block-p-1">Villa 56, Street 21</br>Settlement 5</br>Cairo, Egypt</p>
+          </div>
         </div>
         <div class="contact-item">
           <img src="../images/email2.png"/>
-          <p class="footer-main-block-p-2">info@ispark.com</br>sales@ispark.com</p>
+          <div>
+            <p class="footer-main-block-p-2">info@ispark.com</br>sales@ispark.com</p>
+          </div>
         </div>
         <div class="contact-item">
           <img src="../images/phone2.png"/>
-          <p class="footer-main-block-p-2">+2 012 345 67890</br>+2 23745662</p>
+          <div>
+            <p class="footer-main-block-p-2">+2 012 345 67890</br>+2 23745662</p>
+          </div>
         </div>
       </div>
     </div>
@@ -97,18 +104,18 @@
       <div class="sub-title col-xs-12">
         <a href="#">Drop us an email</a>
       </div>
-      <form class="col-xs-12 col-md-8 col-md-offset-2">
+      <form id="contact-form" class="col-xs-12 col-md-8 col-md-offset-2">
         <div class="form-group col-xs-12 col-md-4">
-          <input class="full-width" placeholder="Name" />
+          <input class="full-width" name="Name" placeholder="Name" />
         </div>
         <div class="form-group col-xs-12 col-md-4">
-          <input class="full-width" placeholder="Email" />
+          <input class="full-width" name="Email" placeholder="Email" />
         </div>
         <div class="form-group col-xs-12 col-md-4">
-          <input class="full-width" placeholder="Number" />
+          <input class="full-width" name="Number" placeholder="Number" />
         </div>
         <div class="form-group col-xs-12">
-          <textarea class="full-width" placeholder="Type your message here"></textarea>
+          <textarea class="full-width" name="Message" placeholder="Type your message here"></textarea>
         </div>
         <div class="form-group col-xs-12 col-md-4 pull-right">
           <input class="full-width submit-btn" type="submit" value="Send Message" />
@@ -198,6 +205,15 @@
       zoom: 15
     }
     $('#map').gMap(options);
+
+    $("#contact-form").validate({
+      rules: {
+        Name: "required",
+        Email: { required: true, email: true },
+        Number: "required",
+        Message: "required"
+      }
+     });
   </script>
 
 
