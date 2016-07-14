@@ -115,7 +115,7 @@
             <div class="team-name-div"><p class="team-download">Download Profile</p></div>
           </div> 
         </a>
-        <hr class="team-line-red">
+        <hr class="team-line-yellow">
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="team-person-img-border">
@@ -171,7 +171,7 @@
             <div class="team-name-div"><p class="team-download">Apply Now</p></div>
           </div> 
         </a>
-        <hr class="team-line-red">
+        <hr class="team-line-yellow">
       </div>
     </div>
 
@@ -226,7 +226,7 @@
           <img src="../images/team-mail-icon.png">
           <div class="team-name-div"><p class="team-email">hany.olama@gmail.com</p></div>
         </div>
-        <hr class="team-line-red">
+        <hr class="team-line-yellow">
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="team-person-img-border">
@@ -270,7 +270,7 @@
           <img src="../images/team-mail-icon.png">
           <div class="team-name-div"><p class="team-email">careers@ispark.com</p></div>
         </div>
-        <hr class="team-line-red">
+        <hr class="team-line-yellow">
       </div>
     </div>
   </div>
@@ -325,18 +325,20 @@
 
 <script>
 //---------- Open image popup ----------//
-    function openModal(elem){
-      var image = $(elem).parent().children("img").attr("src");
-      $("#imageModal .magnified-image").attr("src", image);
-      $('#imageModal').modal();
-    }
+function openModal(elem){
+  var image = $(elem).parent().children("img").attr("src");
+  $("#imageModal .magnified-image").attr("src", image);
+  $('#imageModal').modal();
+}
 
 $(document).ready(function(){
-  $(".team-person-img-border").mouseenter(function(){
-    $(this).children(".team-img-overlay").slideDown("fast");
+  $(".team-main-div > div").mouseenter(function(){
+    $(this).children("hr").css("border-color", "#821638");
+    $(this).children(".team-person-img-border").children(".team-img-overlay").slideDown("fast");
   });
-  $(".team-person-img-border").mouseleave(function(){
-    $(this).children(".team-img-overlay").slideUp("fast");
+  $(".team-main-div > div").mouseleave(function(){
+  $(this).children("hr").css("border-color", "#feb041");
+    $(this).children(".team-person-img-border").children(".team-img-overlay").slideUp("fast");
   });
 });
 </script>

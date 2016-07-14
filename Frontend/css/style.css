@@ -554,7 +554,7 @@ a:hover {
 .more-events {
     text-align: center;
 }
-.jobs-banner, .jobs-outer-banner {
+.jobs-banner, .jobs-outer-banner, .shadowing-banner {
     background-image: url("../images/jobs_banner.jpg");
 }
 .mentors-banner {
@@ -563,7 +563,7 @@ a:hover {
 .contact-banner {
     background-image: url("../images/contact_banner.jpg");
 }
-.jobs-banner, .mentors-banner, .contact-banner, .jobs-outer-banner {
+.jobs-banner, .mentors-banner, .contact-banner, .jobs-outer-banner, .shadowing-banner {
     margin-top: 120px;
     position: absolute;
     background-repeat: no-repeat;
@@ -572,7 +572,7 @@ a:hover {
     background-size: cover;
     background-position: center;
 }
-.jobs-banner .title, .mentors-banner .title, .contact-banner .title, .jobs-outer-banner .title {
+.jobs-banner .title, .mentors-banner .title, .contact-banner .title, .jobs-outer-banner .title, .shadowing-banner .title {
     font-size: 36px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
@@ -586,7 +586,10 @@ a:hover {
 .jobs-outer-banner .title {
     margin-left: -60px;
 }
-.jobs-banner .title span, .mentors-banner .title span, .contact-banner .title span, .jobs-outer-banner .title span {
+.shadowing-banner .title {
+    margin-left: -330px;
+}
+.jobs-banner .title span, .mentors-banner .title span, .contact-banner .title span, .jobs-outer-banner .title span, .shadowing-banner .title span {
     font-family: 'Sketch Rockwell', sans-serif;
     color: #feb041;
 }
@@ -1251,7 +1254,7 @@ input#password {
     border-radius: 50%;
     background: #821638;
     top: 0;
-    margin-left: -15px;
+    margin-left: -10px;
     cursor: pointer;
 }
 .team-img-overlay > div {
@@ -1847,7 +1850,7 @@ label:hover:before {
     margin-bottom: 0px;
     color: #821638 !important;
 }
-.jobs-outer .title {
+.jobs-outer .title, .shadowing- {
     font-size: 36px;
     font-weight: 600;
 }
@@ -2264,10 +2267,16 @@ label:hover:before {
 .counter {
     padding: 60px 0;
 }
+.shadowing-banner .title {
+    margin-left: -250px;
+}
 }
 @media (max-width: 450px) {
 .counter-container {
     height: 50vw;
+}
+.shadowing-banner .title {
+    margin-left: -200px;
 }
 }
 @media (max-width: 400px) {
@@ -2285,6 +2294,10 @@ label:hover:before {
     height: 32px;
     width: 100px;
     font-size: 12px;
+}
+.shadowing-banner .title {
+    margin-left: -160px;
+    top: 70px;
 }
 }
 
