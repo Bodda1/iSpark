@@ -668,7 +668,7 @@ a:hover {
     padding: 0 5px;
 }
 .contact-row #map {
-    top: 30px;
+    /*top: 30px;*/
     display: block;
     width: 100%;
     height: 500px;
@@ -1278,7 +1278,7 @@ input#password {
     width: 435px;
 }
 .job .bselect-label {
-    min-width: 340px !important;
+    min-width: 220px !important;
 }
 .job-outer-title {
     font-size: 19px;
@@ -2115,6 +2115,9 @@ label:hover:before {
 #imageModal .magnified-image {
     width: 100%;
 }
+#allEventsModal {
+    z-index: 100000;
+}
 
 @media (max-width: 1199px) {
     .sticky .navbar-nav > li > a {
@@ -2313,9 +2316,15 @@ label:hover:before {
 }
 .ui-accordion .ui-accordion-content {
     padding: 0px !important;
-    }
+}
 .shadowing-banner .title {
     margin-left: -200px;
+}
+.partners .bselect-label, .mentors .bselect-label {
+    font-size: 12px;
+}
+.job .bselect {
+    width: auto;
 }
 }
 @media (max-width: 400px) {
