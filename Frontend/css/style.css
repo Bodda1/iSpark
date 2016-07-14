@@ -728,14 +728,19 @@ a:hover {
     background-image: url("../images/loginHeader.jpg");
     margin-top: 120px;
     width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: table;
 }
-.login-header-img p{
+.login-header-img div{
     text-align: center;
     color: #feb041;
     font-weight: 900;
     font-size: 36px;
-    line-height: 5.4;
     font-family: 'Sketch Rockwell', sans-serif;
+    display: table-cell;
+    vertical-align: middle;
 }
 .login-form-div {
     text-align: center;
@@ -893,11 +898,11 @@ input#password {
 #accordion .fa {
     float: right;
 }
-.accordion-color-blue {
-    background-color: #102b4c !important;
+#accordion h3.accordion-color:nth-of-type(2n) {
+    background-color: #821638;
 }
-.accordion-color-red {
-    background-color: #821638 !important;
+#accordion h3.accordion-color:nth-of-type(2n+1) {
+    background-color: #102b4c;
 }
 .accordion-body-img {
     width: 100%;
@@ -1726,11 +1731,11 @@ label:hover:before {
     border-radius: 10px !important;
     float: right;
 }
-.modal-dialog {
+#myModal .modal-dialog {
     width: 100%;
     margin: 0px;
 }
-.modal {
+#myModal.modal {
     z-index: 100000;
     padding: 0px !important;
 }
@@ -1871,17 +1876,17 @@ padding: 50px 0;
     color: #821638;
     padding: 8px 15px;
 }
-.job-desc-container > div:last-child .job-desc > div:last-child {
+.job-desc-container > div:last-child .job-desc > div:last-child, .major-interests {
     max-height: 210px;
     overflow-y: scroll;
 }
-.job-desc-container .job-desc > div:last-child {
+.job-desc-container .job-desc > div:last-child, .major-interests {
     font-size: 18px;
     font-weight: bold;
     line-height: 21px;
     padding: 15px 0;
 }
-.job-desc-container .job-desc > div span {
+.job-desc-container .job-desc > div span, .major-interests > span {
     font-size: 18px;
     font-weight: bold;
     padding: 5px 10px;
@@ -1890,20 +1895,24 @@ padding: 50px 0;
     line-height: 26px;
     margin: 2px;
 }
-.job-desc-container .job-desc > div span:nth-child(3n+1) {
+.job-desc-container .job-desc > div span:nth-child(3n+1), .major-interests > span:nth-child(3n+1) {
     background-color: #102b4c;
     color: #fff;
 }
-.job-desc-container .job-desc > div span:nth-child(3n+2) {
+.job-desc-container .job-desc > div span:nth-child(3n+2), .major-interests > span:nth-child(3n+2) {
     background-color: #821638;
     color: #feb041;
 }
-.job-desc-container .job-desc > div span:nth-child(3n) {
+.job-desc-container .job-desc > div span:nth-child(3n), .major-interests > span:nth-child(3n) {
     background-color: #feb041;
     color: #821638;
 }
-.job-desc-container .job-desc .interests .add-btn {
+.job-desc-container .job-desc .interests .add-btn, .major-interests .add-btn {
     cursor: pointer;
+}
+.job-desc-container .job-desc .interests .add-btn:hover , .major-interests .add-btn:hover {
+    background-color: #821638;
+    color: white;
 }
 .pie_progress .pie_progress__number {
     color: #fff;
@@ -1962,7 +1971,28 @@ padding: 50px 0;
 .related-jobs {
     margin: 30px 0;
 }
-
+.accordion-button:hover, .job-load-more-button:hover, .login-form-button:hover {
+    background-color: #821638;
+    color: white;
+}
+.job-main-content:hover {
+    border: 1px solid #821638;
+    border-radius: 10px;
+    margin-bottom: 18px !important;
+}
+.accordion-main-block-height {
+    height: 259px;
+}
+.accordion-main-block-height img {
+    border: 1px solid #102b4c;
+    border-radius: 30px;
+}
+.accordion-block-min-wdith {
+    min-width: 200px !important;
+}
+.accordion-block-min-wdith .col-md-3 {
+    padding: 0px !important;
+}
 @media (max-width: 1166px) {
 #endCarousel .text div:first-child {
     font-size: 30px;
@@ -1988,11 +2018,6 @@ padding: 50px 0;
     font-size: 28px;
 }
 }
-@media (max-width: 992px) and (min-width: 767px) {
-.login-header-img {
-    margin-top: 290px;
-}
-}
 @media (max-width: 923px) {
 .counter > div > div:last-child {
     font-size: 22px;
@@ -2015,6 +2040,13 @@ padding: 50px 0;
 }
 .main-header .container, .sticky .container {
     width: 100%;
+}
+.footer-main-block {
+    padding: 5px 35px 5px 35px !important;
+    margin: 0px 25px 0px 25px !important;
+}
+.footer-container {
+    width: 100% !important;
 }
 }
 @media (max-width: 933px) {
@@ -2081,9 +2113,6 @@ padding: 50px 0;
     .down-arrow {
         bottom: 10px;
     }
-    .login-header-img {
-        margin-top: 158px;
-    }
 }
 @media (max-width: 690px) {
 .counter-container {
@@ -2120,6 +2149,9 @@ padding: 50px 0;
 .counter-container {
     height: 50vw;
 }
+.ui-accordion .ui-accordion-content {
+    padding: 0px !important;
+}
 }
 @media (max-width: 400px) {
 #homeCarousel .slider-panel {
@@ -2138,4 +2170,22 @@ padding: 50px 0;
     font-size: 12px;
 }
 }
+@media (max-width: 502px) {
+.login-header-img-sm {
+    display: block !important;
+    padding-top: 40px !important;
+}
+.login-header-img-sm span {
+    display: block !important;
+    margin-right: 0px !important;
+}
+.login-header-img-sm div {
+    display: block;
+    font-size: 34px !important;
+}
+.conf-img div {
+    margin-top: 35px;
+}
+}
+
 
