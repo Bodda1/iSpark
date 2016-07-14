@@ -2,10 +2,12 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bselect.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
 
     <script src="../js/jquery-1.10.2.min.js"></script>
+    <script src="../js/bselect.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -46,8 +48,8 @@
 <div class="clearfix"></div>
 
 <!-- Image header -->
-<div class="login-header-img">
-    <p><span class="major-title-span">MEET THE</span>TEAM</p>
+<div class="login-header-img login-header-img-sm">
+    <div><span class="major-title-span">MEET THE</span>TEAM</div>
 </div>
 
 <!-- Body-->
@@ -120,9 +122,9 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="team-person-img-border">
           <img class="team-person-img" src="../images/team-avatar.png">
-          <div class="team-img-overlay" onclick="openModal(this)">
+          <div class="team-img-overlay" onclick="openDownloadModal(this)">
             <div>
-              <img class="" src="../images/team-zoom-icon.png">
+              <img class="" src="../images/team-apply.png">
             </div>
           </div>
         </div>
@@ -148,9 +150,9 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="team-person-img-border">
           <img class="team-person-img" src="../images/team-avatar.png">
-          <div class="team-img-overlay" onclick="openModal(this)">
+          <div class="team-img-overlay" onclick="openDownloadModal(this)">
             <div>
-              <img class="" src="../images/team-zoom-icon.png">
+              <img class="" src="../images/team-apply.png">
             </div>
           </div>
         </div>
@@ -231,9 +233,9 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="team-person-img-border">
           <img class="team-person-img" src="../images/team-avatar.png">
-          <div class="team-img-overlay" onclick="openModal(this)">
+          <div class="team-img-overlay" onclick="openDownloadModal(this)">
             <div>
-              <img class="" src="../images/team-zoom-icon.png">
+              <img class="" src="../images/team-apply.png">
             </div>
           </div>
         </div>
@@ -253,9 +255,9 @@
       <div class="col-md-3 col-sm-6 col-xs-12">
         <div class="team-person-img-border">
           <img class="team-person-img" src="../images/team-avatar.png">
-          <div class="team-img-overlay" onclick="openModal(this)">
+          <div class="team-img-overlay" onclick="openDownloadModal(this)">
             <div>
-              <img class="" src="../images/team-zoom-icon.png">
+              <img class="" src="../images/team-apply.png">
             </div>
           </div>
         </div>
@@ -275,6 +277,123 @@
     </div>
   </div>
 </div> 
+
+<!-- modal -->
+<div id="myModal" class="modal fade form-background" role="dialog">
+  <div class="modal-dialog">
+    <div>
+    <div>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <img class="popup-form-close" src="../images/form-close.png" />
+      </button>
+    </div>
+    <div class="container">
+      <div class="row">
+
+        <!-- Logo -->
+        <div class="col-md-12 form-logo">
+          <img src="../images/logo.png" /></a>
+        </div>
+
+        <!-- Hidden field for ID -->
+        <div class="col-md-12 hidden">
+          <p id="event-id"></p>
+        </div>
+
+        <!-- Title -->
+        <div class="col-md-12 form-title">
+          <p class="major-title-2">CAREER DISCOVERY PROGRAM 2.0</p>
+          <p>YOU'RE ONE STEP AWAY FROM AN AWESOME EXPERIENCE !!</p>
+        </div>
+
+        <!-- Form -->
+        <div class="col-md-12">
+          <form id="major-exploration-form" method="post" class="popup-form partners">
+            <div class="col-md-4">
+              <input type="text" id="name" name="name" class="form-control" placeholder="Name" />
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="email-pop" name="email" class="form-control" placeholder="Email" />
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="phone" name="phone" class="form-control" placeholder="Phone" />
+            </div>
+            <div class="clearfix"></div>
+            <div class="popup-form-input-div">
+                <div class="col-md-4">
+                    <input type="text" id="school" name="school" class="form-control" placeholder="School Name" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="grade" name="grade" class="form-control" placeholder="Grade Level" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" id="wave" name="wave" class="form-control" placeholder="Wave" />
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="popup-form-input-div major-dropdown">
+                <div class="col-md-4 select-container popup-form-select">
+                  <select name="select1">
+                    <option value="1">Choose a major</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+                <div class="col-md-4 select-container popup-form-select">
+                  <select name="select2">
+                    <option value="1">Choose a major</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+                <div class="col-md-4 select-container popup-form-select">
+                  <select name="select3">
+                    <option value="1">Choose a major</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-md-12 popup-form-input-div">
+                <p class="popup-checkbox-text popup-form-text-1">Have you ever joined any of iSpark events?</p>
+                <label>
+                  <p class="popup-checkbox-text popup-form-text-2">Yes</p>
+                  <input type="radio" value="None" id="check3" name="check3" checked />
+                  <label for="check3"></label>
+                </label>
+                <label>
+                  <p class="popup-checkbox-text popup-form-text-2 popup-form-text-3">No</p>
+                  <input type="radio" value="None" id="check4" name="check3" />
+                  <label for="check4"></label>
+                </label>
+            </div>
+            <div class="col-md-12">
+                <input type="text" id="state" name="state" class="form-control" placeholder="if yes, state it" />
+            </div>
+             <div class="col-md-12 popup-form-input-div">
+                <p class="popup-checkbox-text">*Please note that not all applicants will be able to come</p>
+            </div>
+            <div class="col-md-12 popup-form-dropdown-div">
+                <p class="popup-checkbox-text">How did you know about us?</p>
+                <div class="popup-form-select select-container">
+                  <select name="select4">
+                    <option value="1">Previous Event</option>
+                    <option value="2">Another Option</option>
+                    <option value="3">Third Option</option>
+                  </select>
+                </div>
+            </div>
+            <div class="col-md-12 popup-form-dropdown-div">
+                <input type="submit" value="Send" class="popup-form-submit">
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
 
 <!-- Footer-->
 <footer>
@@ -331,7 +450,12 @@ function openModal(elem){
   $('#imageModal').modal();
 }
 
+function openDownloadModal(elem){
+  $('#myModal').modal();
+}
+
 $(document).ready(function(){
+  $(".select-container select").bselect({ searchInput : false });
   $(".team-main-div > div").mouseenter(function(){
     $(this).children("hr").css("border-color", "#821638");
     $(this).children(".team-person-img-border").children(".team-img-overlay").slideDown("fast");
@@ -341,6 +465,13 @@ $(document).ready(function(){
     $(this).children(".team-person-img-border").children(".team-img-overlay").slideUp("fast");
   });
 });
+$("button.accordion-button").click(function () {
+    var event_id = $(this).attr("id");
+    $("#event-id").text(event_id);
+});
+$('.modal').on('hidden.bs.modal', function(){
+    $(this).find('form')[0].reset();
+})
 </script>
 
 </html>
