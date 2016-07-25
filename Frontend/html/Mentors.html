@@ -83,6 +83,12 @@
             <option value="1">Administration and Business Management</option>
             <option value="2">Another Option</option>
             <option value="3">Third Option</option>
+            <option value="4">Administration and Business Management</option>
+            <option value="5">Another Option</option>
+            <option value="6">Third Option</option>
+            <option value="7">Administration and Business Management</option>
+            <option value="8">Another Option</option>
+            <option value="9">Third Option</option>
           </select>
         </div>
         <div class="sliders">
@@ -331,6 +337,28 @@
 </div>
 
     <script>
+    //---------- get mentors ajax request ----------//
+    function getMentors(mentor_id) {
+        $.ajax({
+            type: "GET",
+            url: "/mentors?q=" + mentor_id,
+            success: function (result) {
+                if(val == "1" || val == "2" || val == "3") {
+                  $(".sliders").html("");
+                  $(".sliders").append('<div class="flexslider col-xs-12"><ul class="slides"></ul></div>');  
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                  $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
+                }
+            }
+        });
+    }
+
     //---------- Open image popup ----------//
     function openModal(elem){
       var image = $(elem).parent().children("img").attr("src");
@@ -366,18 +394,7 @@
     $(".mentors select").bselect({ searchInput : false });
     $(".mentors select").change(function() {
       var val = $( ".mentors select option:selected" ).val();
-      if(val == "1" || val == "2" || val == "3") {
-        $(".sliders").html("");
-        $(".sliders").append('<div class="flexslider col-xs-12"><ul class="slides"></ul></div>');  
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-        $(".flexslider .slides").append('<li><div class="overlay" onclick="openModal(this)"><div><img src="../images/zoom.png" /></div></div><img src="../images/hashisha.png" /><div class="data"><div class="name">Mostafa Hashisha</div><div class="job">-Journalist-</div><div class="avail">Availability</div><div class="dates">Mondays, 3 PM to 6 PM <br/>Wednesdays, 12 PM to 5 PM<br />Thursdays, 10 AM to !2 PM<br />Fridays, 4 PM to 8 PM</div><div class="email"><img src="../images/email2.png" />mostafa.hashisha@gmail.com</div><div class="line"><hr></div></div></li>');
-      }
+      getMentors(val);
       flexsliderInitialize();
     });
     </script>
