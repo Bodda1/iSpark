@@ -56,6 +56,9 @@ a:hover {
 .sticky .navbar-nav {
 	padding: 35px 0;
 }
+.sticky .navbar-nav .logged-in ul {
+    width: 100%;
+}
 .sticky .navbar-nav .logged-in a {
     color: #102b4c !important;
 }
