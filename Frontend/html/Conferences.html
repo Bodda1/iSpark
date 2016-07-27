@@ -383,44 +383,49 @@
 <script>
 $(document).ready(function(){
   $(".select-container select").bselect({ searchInput : false });
-  $('#accordion').accordion({
-    collapsible:true,
-
-    beforeActivate: function(event, ui) {
-        if (ui.newHeader[0]) {
-            var currHeader  = ui.newHeader;
-            var currContent = currHeader.next('.ui-accordion-content');
-        } else {
-            var currHeader  = ui.oldHeader;
-            var currContent = currHeader.next('.ui-accordion-content');
-        }
-        var isPanelSelected = currHeader.attr('aria-selected') == 'true';
-        currHeader.toggleClass('ui-corner-all',isPanelSelected).toggleClass('accordion-header-active ui-state-active ui-corner-top',!isPanelSelected).attr('aria-selected',((!isPanelSelected).toString()));
-        currHeader.children('.ui-icon').toggleClass('ui-icon-triangle-1-e',isPanelSelected).toggleClass('ui-icon-triangle-1-s',!isPanelSelected);
-        currContent.toggleClass('accordion-content-active',!isPanelSelected)    
-        if (isPanelSelected) { currContent.slideUp(); }  else { currContent.slideDown(); }
-        return false;
-    }
+  initCollapse();
 });
-});
-$("#accordion h3").click(function () {
-
-    if ($(this).find(".flip-arrow").hasClass("fa-chevron-up"))
-    {
-      $(this).find(".flip-arrow").addClass("fa-chevron-down")
-      $(this).find(".flip-arrow").removeClass("fa-chevron-up")
-    }
-    else if ($(this).find(".flip-arrow").hasClass("fa-chevron-down"))
-    {
-      $(this).find(".flip-arrow").removeClass("fa-chevron-down")
-      $(this).find(".flip-arrow").addClass("fa-chevron-up")
-    }
+function initCollapse() {
+    $('#accordion').accordion({
+        collapsible:true,
     
-});
-$("button.accordion-button").click(function () {
-    var event_id = $(this).attr("id");
-    $("#event-id").text(event_id);
-});
+        beforeActivate: function(event, ui) {
+            if (ui.newHeader[0]) {
+                var currHeader  = ui.newHeader;
+                var currContent = currHeader.next('.ui-accordion-content');
+            } else {
+                var currHeader  = ui.oldHeader;
+                var currContent = currHeader.next('.ui-accordion-content');
+            }
+            var isPanelSelected = currHeader.attr('aria-selected') == 'true';
+            currHeader.toggleClass('ui-corner-all',isPanelSelected).toggleClass('accordion-header-active ui-state-active ui-corner-top',!isPanelSelected).attr('aria-selected',((!isPanelSelected).toString()));
+            currHeader.children('.ui-icon').toggleClass('ui-icon-triangle-1-e',isPanelSelected).toggleClass('ui-icon-triangle-1-s',!isPanelSelected);
+            currContent.toggleClass('accordion-content-active',!isPanelSelected)    
+            if (isPanelSelected) { currContent.slideUp(); }  else { currContent.slideDown(); }
+            return false;
+        }
+    });
+
+    $("#accordion h3").click(function () {
+
+        if ($(this).find(".flip-arrow").hasClass("fa-chevron-up"))
+        {
+          $(this).find(".flip-arrow").addClass("fa-chevron-down")
+          $(this).find(".flip-arrow").removeClass("fa-chevron-up")
+        }
+        else if ($(this).find(".flip-arrow").hasClass("fa-chevron-down"))
+        {
+          $(this).find(".flip-arrow").removeClass("fa-chevron-down")
+          $(this).find(".flip-arrow").addClass("fa-chevron-up")
+        }
+        
+    });
+    $("button.accordion-button").click(function () {
+        var event_id = $(this).attr("id");
+        $("#event-id").text(event_id);
+    });
+}
+
 $('.modal').on('hidden.bs.modal', function(){
     $(this).find('form')[0].reset();
 })
