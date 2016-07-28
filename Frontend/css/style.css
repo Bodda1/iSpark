@@ -1155,16 +1155,11 @@ input#password {
     color: #821638;
     line-height: 50px;
 }
-.achievements .badge-item:nth-child(1) img {
+.achievements .badge-item {
+    padding: 0 5px;
+}
+.achievements .badge-item img, .achievements .badge-item img {
     width: 50px;
-}
-.achievements .badge-item:nth-child(2) img {
-    width: 40px;
-    padding-top: 5px;
-}
-.achievements .badge-item:nth-child(3) img {
-    width: 36px;
-    padding-top: 5px;
 }
 .achievements .badge-item:nth-child(2) div, .achievements .badge-item:nth-child(3) div {
     line-height: 25px;
@@ -2222,9 +2217,17 @@ label:hover:before {
 }
 }
 @media (max-width: 900px) {
-.sticky .navbar-nav > li > a {
+ .dropdown li {
+    padding: 0;
+}
+.sticky .navbar-nav > li > a, .dropdown ul a {
     font-size: 13px;
-    padding: 15px 10px;
+    padding: 10px;
+}
+.dropdown li:hover a {
+    font-size: 15px !important;
+    padding: 10px;
+}
 }
 }
 @media (max-width: 980px) {
