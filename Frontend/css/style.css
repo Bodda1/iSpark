@@ -56,7 +56,7 @@ a:hover {
 .sticky .navbar-nav {
 	padding: 35px 0;
 }
-.sticky .navbar-nav .logged-in ul {
+.navbar-nav .logged-in ul {
     width: 100%;
 }
 .sticky .navbar-nav .logged-in a {
@@ -952,6 +952,12 @@ input#password {
 }
 #accordion .fa {
     float: right;
+}
+#accordion .accordion-button-div .fa {
+    font-size: 30px;
+    float: none;
+    position: relative;
+    top: 3px;
 }
 #accordion h3.accordion-color:nth-of-type(2n) {
     background-color: #821638;

@@ -56,7 +56,7 @@
                   <li><a href="../html/team.html">Team</a></li>
                   <li><a href="../html/contact.html">Contact Us</a></li>
                   <li class="logged-in dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, Abdel Rahman</a>
+                    <a href="" onclick="navToProfile()" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Welcome, Abdel Rahman</a>
                     <ul class="dropdown-menu">
                       <li><a href="#">Logout</a></li>
                     </ul>
@@ -402,6 +402,11 @@
       getMentors(val);
       flexsliderInitialize();
     });
+
+    //---------- Profile Navigation ----------//
+    function navToProfile() {
+      window.location.href = "../html/profile.html";
+    }
     </script>
 </body>
 </html>
